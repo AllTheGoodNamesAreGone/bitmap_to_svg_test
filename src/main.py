@@ -59,6 +59,8 @@ for filename in os.listdir(input_dir):
 
 print (f"{already_processed} files left untouched, {newly_processed} files processed")
 
+visualize_header_detection('images/sample2.jpg')
+
 """
 #MAIN
 # Define paths

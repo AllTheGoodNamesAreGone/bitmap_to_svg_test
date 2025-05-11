@@ -7,10 +7,7 @@ import os
 from get_header_fallback import fallback_header_detection
 
 
-#improved file for line based detection - for the same line "instructions to candidates"
-#also has a visualize function to see the boxes and distinction of header-body
-
-def detect_header_with_instructions_and_show_boxes(image_path, header_path= 'headers/test.jpg', body_path = 'bodies/test.jpg', split_image_path = 'split_images'):
+def detect_header_with_table_keywords(image_path, header_path= 'headers/test.jpg', body_path = 'bodies/test.jpg', split_image_path = 'split_images'):
     """
     Detects the header and body regions of a question paper by finding the
     "instructions to candidates" line. Returns two images: header and body.
@@ -33,52 +30,62 @@ def detect_header_with_instructions_and_show_boxes(image_path, header_path= 'hea
     custom_config = r'--oem 3 --psm 1'  # Page segmentation mode: 1 = Automatic page segmentation with OSD
     data = pytesseract.image_to_data(binary, config=custom_config, output_type=Output.DICT)
     
-    # Find the "instructions to candidates" line
-    instruction_line_y = None
+    table_keywords = ["Q.No", "Questions", "Blooms"]
     instruction_regex = re.compile(r'instructions\s+to\s+candidates', re.IGNORECASE)
-    instruction_regex_alt = re.compile (r'candidates', re.IGNORECASE)
-    # Group text by line (using top coordinate and height)
+
+    instruction_line_y = None
+    question_table_y = None
+
+    # Group OCR data by lines
     lines = {}
     for i in range(len(data['text'])):
-        if int(data['conf'][i]) > 30:  # Only consider text with decent confidence
-            text = data['text'][i]
-            if text.strip():  # Skip empty text
-                top = data['top'][i]
-                height = data['height'][i]
-                left = data['left'][i]
-                width = data['width'][i]
-                
-                # Group by line (allow for small variations in top position)
-                line_id = top // 10  # Group lines within 10 pixels
-                if line_id not in lines:
-                    lines[line_id] = {
-                        'texts': [],
-                        'top': top,
-                        'bottom': top + height,
-                        'bboxes': []
-                    }
-                lines[line_id]['texts'].append(text)
-                lines[line_id]['bottom'] = max(lines[line_id]['bottom'], top + height)
-                lines[line_id]['bboxes'].append((left, top, width, height))
-    
-    print("\n🔍 OCR Detected Lines:")
-    for line_id in sorted(lines.keys()):
-        line_text = ' '.join(lines[line_id]['texts'])
-        print(f"Line {line_id}: {line_text}")
+        if int(data['conf'][i]) > 30:
+            text = data['text'][i].strip()
+            if not text:
+                continue
 
-    # Search for instruction line in each detected line of text
-    for line_id, line_data in lines.items():
+            top = data['top'][i]
+            height = data['height'][i]
+            left = data['left'][i]
+            width = data['width'][i]
+
+            line_id = top // 10
+            if line_id not in lines:
+                lines[line_id] = {
+                    'texts': [],
+                    'top': top,
+                    'bottom': top + height,
+                    'bboxes': []
+                }
+
+            lines[line_id]['texts'].append(text)
+            lines[line_id]['bottom'] = max(lines[line_id]['bottom'], top + height)
+            lines[line_id]['bboxes'].append((left, top, width, height))
+
+    # Look for question table first
+    for line_id, line_data in sorted(lines.items(), key=lambda x: x[1]['top']):
         line_text = ' '.join(line_data['texts']).lower()
-        if (instruction_regex.search(line_text) or instruction_regex_alt.search(line_text)):
-            instruction_line_y = line_data['bottom']
+
+        if any(keyword.lower() in line_text for keyword in table_keywords):
+            question_table_y = line_data['top']
+            print(f"[INFO] Detected question table start at line {line_id}: {line_text}")
             break
-    
-    # If we found the instruction line, use it as boundary
-    if instruction_line_y:
+
+        if instruction_regex.search(line_text):
+            instruction_line_y = line_data['bottom']
+            print(f"[INFO] Detected instruction line at line {line_id}: {line_text}")
+
+    # Choose final boundary
+    if question_table_y:
+        header_boundary = question_table_y
+        print("[INFO] Using question table position as boundary.")
+    elif instruction_line_y:
         header_boundary = instruction_line_y
+        print("[INFO] Using instruction line as fallback boundary.")
     else:
-        # Fallback to the original method if no instruction line is found
         header_boundary = fallback_header_detection(gray, binary, h, w)
+        print("[INFO] Using fallback header detection method.")
+
     
     # Create header and body images
     header_img = img[0:header_boundary, :]
@@ -117,7 +124,7 @@ def detect_header_with_instructions_and_show_boxes(image_path, header_path= 'hea
 
 
 
-def visualize_header_detection(image_path, show_text_boxes=True, save_output=False, output_dir=None):
+def visualize_header_detection_2(image_path, show_text_boxes=True, save_output=False, output_dir=None):
     """
     Processes the image and visualizes the header detection with the 
     instructions line highlighted. Optionally shows bounding boxes for all detected text.
@@ -138,7 +145,7 @@ def visualize_header_detection(image_path, show_text_boxes=True, save_output=Fal
     img_with_boxes = img.copy()
     
     # Get header and body images
-    header_img, body_img, boundary = detect_header_with_instructions_and_show_boxes(image_path)
+    header_img, body_img, boundary = detect_header_with_table_keywords(image_path)
     
     # Draw a red line at the boundary
     cv2.line(img_with_line, (0, boundary), (img.shape[1], boundary), (0, 0, 255), 2)

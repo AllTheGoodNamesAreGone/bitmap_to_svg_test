@@ -84,6 +84,6 @@ def fallback_header_detection(gray, binary, h, w):
         header_boundary = int(max(header_candidates))
     else:
         # Fallback: Use 30% of image height
-        header_boundary = int(h * 0.3)
+        header_boundary = int(h * 0.2)
     
     return header_boundary
