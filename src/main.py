@@ -14,22 +14,25 @@ from process_image import process_image
 # Define paths
 input_image_path = 'images/sample1.jpg'  
 output_image_path = 'outputs/output_boxes1.jpg'
+header_path = 'headers/header1.jpg'
+body_path = 'bodies/body1.jpg'
+split_image_path = 'split_images'
 
 # Ensure output directory exists
-if not os.path.exists('output'):
-    os.makedirs('output')
+if not os.path.exists('outputs'):
+    os.makedirs('outputs')
 
-header, body, boundary= detect_header_with_instructions_and_show_boxes(input_image_path)
+header, body, boundary= detect_header_with_instructions_and_show_boxes(input_image_path, header_path, body_path, split_image_path)
 print(f"Header/body boundary detected at y-coordinate: {boundary}")
-display_image(header, "header")
-display_image(body, "body")
+#display_image(header, "header")
+#display_image(body, "body")
 
-visualize_header_detection(
+"""visualize_header_detection(
     image_path=input_image_path,
     show_text_boxes=True,  # Show all text bounding boxes
     save_output=True,      # Save the output images
     output_dir="outputs"    # Save to this directory
-)
+)"""
 
 
 

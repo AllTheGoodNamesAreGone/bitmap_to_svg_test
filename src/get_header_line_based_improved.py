@@ -10,7 +10,7 @@ from get_header_fallback import fallback_header_detection
 #improved file for line based detection - for the same line "instructions to candidates"
 #also has a visualize function to see the boxes and distinction of header-body
 
-def detect_header_with_instructions_and_show_boxes(image_path):
+def detect_header_with_instructions_and_show_boxes(image_path, header_path, body_path, split_image_path):
     """
     Detects the header and body regions of a question paper by finding the
     "instructions to candidates" line. Returns two images: header and body.
@@ -78,8 +78,39 @@ def detect_header_with_instructions_and_show_boxes(image_path):
     # Create header and body images
     header_img = img[0:header_boundary, :]
     body_img = img[header_boundary:, :]
+
+    cv2.imwrite(header_path, header_img)
+    cv2.imwrite(body_path, body_img)
+    print(f"Header and body separated and saved to {header_path} and {body_path}")
+
+    #drawing boundary on copy image 
+    img_with_line = img.copy()
+    boundary = header_boundary
+    cv2.line(img_with_line, (0, boundary), (img.shape[1], boundary), (0, 0, 255), 2)
+    cv2.putText(img_with_line, "Header/Body Boundary", (10, boundary - 10), 
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
     
+    if split_image_path is None:
+            print("Error! No output path for split images given")
+            
+    if not os.path.exists(split_image_path):
+        os.makedirs(split_image_path)
+            
+    base_name = os.path.splitext(os.path.basename(image_path))[0]
+    
+    # Save the visualization images
+    cv2.imwrite(os.path.join(split_image_path, f"{base_name}_boundary.jpg"), img_with_line)
+    boundary_path = os.path.join(split_image_path, f"{base_name}_boundary.jpg")
+
+    print(f"Split image with boundary line saved to {boundary_path}")
+    cv2.imshow('Header Detection (Boundary Only)', img_with_line)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()                
+
     return header_img, body_img, header_boundary
+
+
+
 
 def visualize_header_detection(image_path, show_text_boxes=True, save_output=False, output_dir=None):
     """

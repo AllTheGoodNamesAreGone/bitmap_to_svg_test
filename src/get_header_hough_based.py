@@ -1,5 +1,5 @@
 import cv2
-from main import display_image
+from display_image import display_image
 
 
 #This doesnt work that well, but is mainly for line detection - detects straight lines based on parameters and gaps, doesnt work well for slight ccurves
