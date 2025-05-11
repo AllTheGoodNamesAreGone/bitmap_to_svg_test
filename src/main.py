@@ -7,24 +7,25 @@ from get_header_hough_based import get_header_hough_based
 from get_header_line_based_original import detect_header_with_instructions
 from get_header_fallback import fallback_header_detection 
 from display_image import display_image
-from process_image import process_image
+from process_image import process_image, process_body
 
 
 # Directories
 input_dir = 'images'
-output_dir = 'outputs'
+output_body_dir = 'outputs/body_outputs'
 header_dir = 'headers'
 body_dir = 'bodies'
 split_dir = 'split_images'
 
 # Create output directories if not exist
-for directory in [output_dir, header_dir, body_dir, split_dir]:
+for directory in [output_body_dir, header_dir, body_dir, split_dir]:
     os.makedirs(directory, exist_ok=True)
 
 # Supported image formats
 image_extensions = ('.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff')
 already_processed = 0
 newly_processed = 0
+
 # Process each image
 for filename in os.listdir(input_dir):
     if filename.lower().endswith(image_extensions):
@@ -32,7 +33,7 @@ for filename in os.listdir(input_dir):
 
         # Output paths using the same base filename
         base_name = os.path.splitext(filename)[0]
-        output_image_path = os.path.join(output_dir, f"{base_name}_output.jpg")
+        #output_image_path = os.path.join(output_body_dir, f"{base_name}_output.jpg")
         header_path = os.path.join(header_dir, f"{base_name}_header.jpg")
         body_path = os.path.join(body_dir, f"{base_name}_body.jpg")
         split_image_path = split_dir
@@ -59,7 +60,36 @@ for filename in os.listdir(input_dir):
 
 print (f"{already_processed} files left untouched, {newly_processed} files processed")
 
-visualize_header_detection('images/sample8.jpg')
+bodies_already_processed = 0
+bodies_newly_processed =0
+for filename in os.listdir(body_dir):
+    if filename.lower().endswith(image_extensions):
+        image_path = os.path.join(body_dir, filename)
+
+        # Output paths using the same base filename
+        base_name = os.path.splitext(filename)[0]
+        output_image_path = os.path.join(output_body_dir, f"{base_name}_output.jpg")
+        
+        # Skip if output already exists
+        if (os.path.exists(output_image_path)) :
+            print(f"✅ Skipping {filename} (already processed).")
+            bodies_already_processed = bodies_already_processed +1
+            continue
+
+        try:
+            print(f"\n🚀 Processing {filename}...")
+            process_body(image_path, output_image_path)
+            bodies_newly_processed = bodies_newly_processed +1
+            # Optional: display the result visually (can be commented out for batch runs)
+            #display_image(header, f"{filename} - header")
+            #display_image(body, f"{filename} - body")
+
+        except Exception as e:
+            print(f"❌ Error processing {filename}: {e}")
+
+print (f"{bodies_already_processed} body file(s) left untouched, {newly_processed} body file(s) processed")
+
+#visualize_header_detection('images/sample8.jpg')
 
 """
 #MAIN
