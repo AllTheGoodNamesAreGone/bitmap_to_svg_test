@@ -23,7 +23,8 @@ for directory in [output_dir, header_dir, body_dir, split_dir]:
 
 # Supported image formats
 image_extensions = ('.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff')
-
+already_processed = 0
+newly_processed = 0
 # Process each image
 for filename in os.listdir(input_dir):
     if filename.lower().endswith(image_extensions):
@@ -39,6 +40,7 @@ for filename in os.listdir(input_dir):
         # Skip if output already exists
         if os.path.exists(header_path) and os.path.exists(body_path):
             print(f"✅ Skipping {filename} (already processed).")
+            already_processed = already_processed +1
             continue
 
         try:
@@ -47,14 +49,15 @@ for filename in os.listdir(input_dir):
                 image_path, header_path, body_path, split_image_path
             )
             print(f"Header/body boundary for {filename} at y = {boundary}")
-
+            newly_processed = newly_processed +1
             # Optional: display the result visually (can be commented out for batch runs)
-            display_image(header, f"{filename} - header")
-            display_image(body, f"{filename} - body")
+            #display_image(header, f"{filename} - header")
+            #display_image(body, f"{filename} - body")
 
         except Exception as e:
             print(f"❌ Error processing {filename}: {e}")
 
+print (f"{already_processed} files left untouched, {newly_processed} files processed")
 
 """
 #MAIN
