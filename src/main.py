@@ -38,7 +38,7 @@ for filename in os.listdir(input_dir):
         split_image_path = split_dir
 
         # Skip if output already exists
-        if os.path.exists(header_path) and os.path.exists(body_path):
+        if (os.path.exists(header_path) and os.path.exists(body_path)) or (filename.lower().endswith("part2.jpg")) :
             print(f"✅ Skipping {filename} (already processed).")
             already_processed = already_processed +1
             continue
@@ -59,7 +59,7 @@ for filename in os.listdir(input_dir):
 
 print (f"{already_processed} files left untouched, {newly_processed} files processed")
 
-visualize_header_detection('images/sample2.jpg')
+visualize_header_detection('images/sample8.jpg')
 
 """
 #MAIN

@@ -61,10 +61,10 @@ def detect_header_with_instructions_and_show_boxes(image_path, header_path= 'hea
                 lines[line_id]['bottom'] = max(lines[line_id]['bottom'], top + height)
                 lines[line_id]['bboxes'].append((left, top, width, height))
     
-    print("\n🔍 OCR Detected Lines:")
+    """print("\n🔍 OCR Detected Lines:")
     for line_id in sorted(lines.keys()):
         line_text = ' '.join(lines[line_id]['texts'])
-        print(f"Line {line_id}: {line_text}")
+        print(f"Line {line_id}: {line_text}")"""
 
     # Search for instruction line in each detected line of text
     for line_id, line_data in lines.items():
@@ -108,9 +108,9 @@ def detect_header_with_instructions_and_show_boxes(image_path, header_path= 'hea
     boundary_path = os.path.join(split_image_path, f"{base_name}_boundary.jpg")
 
     print(f"Split image with boundary line saved to {boundary_path}")
-    cv2.imshow('Header Detection (Boundary Only)', img_with_line)
+    """cv2.imshow('Header Detection (Boundary Only)', img_with_line)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()                
+    cv2.destroyAllWindows()"""                
 
     return header_img, body_img, header_boundary
 
