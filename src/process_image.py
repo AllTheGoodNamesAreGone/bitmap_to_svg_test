@@ -70,6 +70,9 @@ def process_body(image_path, output_path):
     cv2.imwrite(output_path, img)
     print(f"Bounding boxes drawn and saved to {output_path}")
 
+
+def process_header (image_path, output_path):
+    None
 # Function to process image and find bounding boxes
 def process_image(image_path, output_path):
     # Read the image

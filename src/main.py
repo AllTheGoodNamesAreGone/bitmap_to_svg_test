@@ -8,7 +8,7 @@ from get_header_line_based_original import detect_header_with_instructions
 from get_header_fallback import fallback_header_detection 
 from display_image import display_image
 from process_image import process_image, process_body
-
+from layout_analyzer import analyze_document_layout, detect_logo, detect_headers_footers, detect_paragraphs, detect_tables, merge_overlapping_boxes
 
 # Directories
 input_dir = 'images'
@@ -87,8 +87,9 @@ for filename in os.listdir(body_dir):
         except Exception as e:
             print(f"❌ Error processing {filename}: {e}")
 
-print (f"{bodies_already_processed} body file(s) left untouched, {bodies_newly_processed} body file(s) processed")
+print (f"\n{bodies_already_processed} body file(s) left untouched, {bodies_newly_processed} body file(s) processed")
 
+result, boxes = analyze_document_layout('headers/sample1_header.jpg','outputs/test.jpg', display_steps= True)
 
 """
 process_body('bodies/sample1_body.jpg', 'outputs/body_outputs/test1.jpg')
