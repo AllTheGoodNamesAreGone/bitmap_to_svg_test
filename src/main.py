@@ -12,7 +12,7 @@ from process_image import process_image, process_body
 
 # Directories
 input_dir = 'images'
-output_body_dir = 'outputs/body_outputs'
+output_body_dir = 'outputs/body_outputs/trial1'
 header_dir = 'headers'
 body_dir = 'bodies'
 split_dir = 'split_images'
@@ -87,8 +87,14 @@ for filename in os.listdir(body_dir):
         except Exception as e:
             print(f"❌ Error processing {filename}: {e}")
 
-print (f"{bodies_already_processed} body file(s) left untouched, {newly_processed} body file(s) processed")
+print (f"{bodies_already_processed} body file(s) left untouched, {bodies_newly_processed} body file(s) processed")
 
+
+"""
+process_body('bodies/sample1_body.jpg', 'outputs/body_outputs/test1.jpg')
+process_body('bodies/sample2_body.jpg', 'outputs/body_outputs/test2.jpg')
+process_body('bodies/sample3_body.jpg', 'outputs/body_outputs/test3.jpg')
+"""
 #visualize_header_detection('images/sample8.jpg')
 
 """

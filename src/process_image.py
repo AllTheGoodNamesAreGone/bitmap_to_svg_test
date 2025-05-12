@@ -30,8 +30,9 @@ def process_body(image_path, output_path):
     #display_image(body, "body")
 
     # Apply adaptive thresholding
-    thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-                                   cv2.THRESH_BINARY_INV, 15, 10)
+    #ALTERNATIVE OPTION - ADAPTIVE THRESH GAUSSIAN, ORIGINAL PARAMETERS - 15,10
+    thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C,
+                                   cv2.THRESH_BINARY_INV, 11, 5) 
     
     #display_image(thresh, "step 2 - after thresh")
     
@@ -40,7 +41,7 @@ def process_body(image_path, output_path):
 
     #display_image(dilated, "step 3 - dilated")
     # Find contours (connected components)
-    contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     #display_image(contours, "step 4 - contours")
 
     # List to store bounding boxes
@@ -50,8 +51,14 @@ def process_body(image_path, output_path):
     for c in contours:
         x, y, w, h = cv2.boundingRect(c)
         #print(f"Box: x={x}, y={y}, w={w}, h={h}")
-        if ( w > 20 and h > 20):  # Filter out noise based on box size (adjust as needed)
+        """
+        aspect_ratio = w / float(h)
+        if 0.5 < aspect_ratio < 10 and w > 20 and h > 15:
             boxes.append((x, y, w, h))
+        """
+        if ( w > 80 and h > 20):  # Filter out noise based on box size (adjust as needed)
+            boxes.append((x, y, w, h))
+        
 
     # Draw bounding boxes on the original image
     for x, y, w, h in boxes:
@@ -59,7 +66,7 @@ def process_body(image_path, output_path):
 
     
     # Save the output image with bounding boxes
-    display_image(img)
+    #display_image(img)
     cv2.imwrite(output_path, img)
     print(f"Bounding boxes drawn and saved to {output_path}")
 
@@ -107,7 +114,7 @@ def process_image(image_path, output_path):
     for c in contours:
         x, y, w, h = cv2.boundingRect(c)
         #print(f"Box: x={x}, y={y}, w={w}, h={h}")
-        if ( w > 20 and h > 20):  # Filter out noise based on box size (adjust as needed)
+        if ( w > 30 and h > 20):  # Filter out noise based on box size (adjust as needed)
             boxes.append((x, y, w, h))
 
     # Draw bounding boxes on the original image
