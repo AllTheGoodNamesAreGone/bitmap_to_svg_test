@@ -1,3 +1,6 @@
+process body function is used with RETR LIST 
+
+
 def process_body(image_path, output_path):
     if not os.path.exists(image_path):
         raise FileNotFoundError(f"Image not found: {image_path}")
