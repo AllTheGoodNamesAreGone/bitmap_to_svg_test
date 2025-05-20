@@ -6,6 +6,8 @@ from skimage.filters import threshold_local
 from scipy.ndimage import binary_fill_holes
 from display_image import display_image
 
+#HEADER PROCESSING 
+
 def analyze_document_layout(image_path, output_path, display_steps=False):
     """
     Enhanced document layout analysis that identifies and draws bounding boxes around

@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1241" height="1754" viewBox="0 0 1241 1754">
+  <rect width="1241" height="1754" fill="white"/>
+  <rect x="15" y="48" width="56" height="68" stroke="red" stroke-width="2" fill="none"/>
+  <text x="20" y="43" font-family="Arial" font-size="12" fill="red">Logo</text>
+  <g transform="translate(20, 53)">
+    <circle cx="20" cy="20" r="15" fill="#eee" stroke="red" stroke-width="1"/>
+  </g>
+  <rect x="10" y="30" width="65" height="18" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="15" y="25" font-family="Arial" font-size="12" fill="blue">Header 1</text>
+  <text x="20" y="44.0" font-family="Arial" font-size="14" fill="#333">Header Text 1</text>
+  <rect x="86" y="45" width="180" height="23" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="91" y="40" font-family="Arial" font-size="12" fill="blue">Header 2</text>
+  <text x="96" y="61.5" font-family="Arial" font-size="14" fill="#333">Header Text 2</text>
+  <rect x="844" y="50" width="200" height="30" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="849" y="45" font-family="Arial" font-size="12" fill="blue">Header 3</text>
+  <text x="854" y="70.0" font-family="Arial" font-size="14" fill="#333">Header Text 3</text>
+  <rect x="647" y="55" width="127" height="21" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="652" y="50" font-family="Arial" font-size="12" fill="blue">Header 4</text>
+  <text x="657" y="70.5" font-family="Arial" font-size="14" fill="#333">Header Text 4</text>
+  <rect x="443" y="55" width="202" height="29" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="448" y="50" font-family="Arial" font-size="12" fill="blue">Header 5</text>
+  <text x="453" y="74.5" font-family="Arial" font-size="14" fill="#333">Header Text 5</text>
+  <rect x="349" y="57" width="90" height="27" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="354" y="52" font-family="Arial" font-size="12" fill="blue">Header 6</text>
+  <text x="359" y="75.5" font-family="Arial" font-size="14" fill="#333">Header Text 6</text>
+  <rect x="86" y="74" width="228" height="16" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="91" y="69" font-family="Arial" font-size="12" fill="blue">Header 7</text>
+  <text x="96" y="87.0" font-family="Arial" font-size="14" fill="#333">Header Text 7</text>
+  <rect x="1053" y="88" width="152" height="29" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="1058" y="83" font-family="Arial" font-size="12" fill="blue">Header 8</text>
+  <text x="1063" y="107.5" font-family="Arial" font-size="14" fill="#333">Header Text 8</text>
+  <rect x="941" y="88" width="110" height="31" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="946" y="83" font-family="Arial" font-size="12" fill="blue">Header 9</text>
+  <text x="951" y="108.5" font-family="Arial" font-size="14" fill="#333">Header Text 9</text>
+  <rect x="741" y="93" width="197" height="30" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="746" y="88" font-family="Arial" font-size="12" fill="blue">Header 10</text>
+  <text x="751" y="113.0" font-family="Arial" font-size="14" fill="#333">Header Text 10</text>
+  <rect x="544" y="95" width="127" height="23" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="549" y="90" font-family="Arial" font-size="12" fill="blue">Header 11</text>
+  <text x="554" y="111.5" font-family="Arial" font-size="14" fill="#333">Header Text 11</text>
+  <rect x="381" y="96" width="162" height="28" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="386" y="91" font-family="Arial" font-size="12" fill="blue">Header 12</text>
+  <text x="391" y="115.0" font-family="Arial" font-size="14" fill="#333">Header Text 12</text>
+  <rect x="917" y="209" width="155" height="36" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="922" y="204" font-family="Arial" font-size="12" fill="blue">Header 13</text>
+  <text x="927" y="232.0" font-family="Arial" font-size="14" fill="#333">Header Text 13</text>
+  <rect x="550" y="216" width="178" height="25" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="555" y="211" font-family="Arial" font-size="12" fill="blue">Header 14</text>
+  <text x="560" y="233.5" font-family="Arial" font-size="14" fill="#333">Header Text 14</text>
+  <rect x="729" y="217" width="187" height="30" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="734" y="212" font-family="Arial" font-size="12" fill="blue">Header 15</text>
+  <text x="739" y="237.0" font-family="Arial" font-size="14" fill="#333">Header Text 15</text>
+  <rect x="393" y="217" width="156" height="32" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="398" y="212" font-family="Arial" font-size="12" fill="blue">Header 16</text>
+  <text x="403" y="238.0" font-family="Arial" font-size="14" fill="#333">Header Text 16</text>
+  <rect x="112" y="218" width="190" height="30" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="117" y="213" font-family="Arial" font-size="12" fill="blue">Header 17</text>
+  <text x="122" y="238.0" font-family="Arial" font-size="14" fill="#333">Header Text 17</text>
+  <rect x="1033" y="254" width="143" height="33" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="1038" y="249" font-family="Arial" font-size="12" fill="blue">Header 18</text>
+  <text x="1043" y="275.5" font-family="Arial" font-size="14" fill="#333">Header Text 18</text>
+  <rect x="919" y="258" width="114" height="32" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="924" y="253" font-family="Arial" font-size="12" fill="blue">Header 19</text>
+  <text x="929" y="279.0" font-family="Arial" font-size="14" fill="#333">Header Text 19</text>
+  <rect x="732" y="261" width="186" height="31" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="737" y="256" font-family="Arial" font-size="12" fill="blue">Header 20</text>
+  <text x="742" y="281.5" font-family="Arial" font-size="14" fill="#333">Header Text 20</text>
+  <rect x="553" y="261" width="114" height="24" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="558" y="256" font-family="Arial" font-size="12" fill="blue">Header 21</text>
+  <text x="563" y="278.0" font-family="Arial" font-size="14" fill="#333">Header Text 21</text>
+  <rect x="395" y="262" width="157" height="30" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="400" y="257" font-family="Arial" font-size="12" fill="blue">Header 22</text>
+  <text x="405" y="282.0" font-family="Arial" font-size="14" fill="#333">Header Text 22</text>
+  <rect x="433" y="305" width="302" height="25" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="438" y="300" font-family="Arial" font-size="12" fill="blue">Header 23</text>
+  <text x="443" y="322.5" font-family="Arial" font-size="14" fill="#333">Header Text 23</text>
+  <rect x="67" y="382" width="1144" height="56" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="72" y="377" font-family="Arial" font-size="12" fill="blue">Header 24</text>
+  <text x="77" y="415.0" font-family="Arial" font-size="14" fill="#333">Header Text 24</text>
+  <rect x="634" y="432" width="177" height="6" stroke="blue" stroke-width="2" fill="none"/>
+  <text x="639" y="427" font-family="Arial" font-size="12" fill="blue">Header 25</text>
+  <text x="644" y="440.0" font-family="Arial" font-size="14" fill="#333">Header Text 25</text>
+  <rect x="65" y="377" width="1148" height="142" stroke="green" stroke-width="2" fill="none"/>
+  <text x="70" y="372" font-family="Arial" font-size="12" fill="green">Course Info</text>
+  <rect x="65.0" y="377.0" width="574.0" height="47.333333333333336" stroke="green" stroke-width="1" fill="none"/>
+  <rect x="639.0" y="377.0" width="574.0" height="47.333333333333336" stroke="green" stroke-width="1" fill="none"/>
+  <rect x="65.0" y="424.3333333333333" width="574.0" height="47.333333333333336" stroke="green" stroke-width="1" fill="none"/>
+  <rect x="639.0" y="424.3333333333333" width="574.0" height="47.333333333333336" stroke="green" stroke-width="1" fill="none"/>
+  <rect x="65.0" y="471.6666666666667" width="574.0" height="47.333333333333336" stroke="green" stroke-width="1" fill="none"/>
+  <rect x="639.0" y="471.6666666666667" width="574.0" height="47.333333333333336" stroke="green" stroke-width="1" fill="none"/>
+  <rect x="58" y="577" width="1183" height="1064" stroke="orange" stroke-width="2" fill="none"/>
+  <text x="63" y="572" font-family="Arial" font-size="12" fill="orange">Questions Table</text>
+  <rect x="58.0" y="577.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="353.75" y="577.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="649.5" y="577.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="945.25" y="577.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="58.0" y="754.3333333333334" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="353.75" y="754.3333333333334" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="649.5" y="754.3333333333334" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="945.25" y="754.3333333333334" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="58.0" y="931.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="353.75" y="931.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="649.5" y="931.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="945.25" y="931.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="58.0" y="1109.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="353.75" y="1109.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="649.5" y="1109.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="945.25" y="1109.0" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="58.0" y="1286.3333333333335" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="353.75" y="1286.3333333333335" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="649.5" y="1286.3333333333335" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="945.25" y="1286.3333333333335" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="58.0" y="1463.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="353.75" y="1463.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="649.5" y="1463.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <rect x="945.25" y="1463.6666666666667" width="295.75" height="177.33333333333334" stroke="orange" stroke-width="1" fill="none"/>
+  <text x="68.0" y="597" font-family="Arial" font-size="14" fill="#333">Q.No</text>
+  <text x="363.75" y="597" font-family="Arial" font-size="14" fill="#333">Questions</text>
+  <text x="659.5" y="597" font-family="Arial" font-size="14" fill="#333">CO</text>
+  <text x="955.25" y="597" font-family="Arial" font-size="14" fill="#333">Marks</text>
+</svg>

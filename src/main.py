@@ -2,16 +2,10 @@ import cv2
 import os
 
 from get_header_line_based_improved import detect_header_with_instructions_and_show_boxes, visualize_header_detection
-from get_header_threshold_based import get_header_threshold_based
-from get_header_hough_based import get_header_hough_based
-from get_header_line_based_original import detect_header_with_instructions
-from get_header_fallback import fallback_header_detection 
 from display_image import display_image
 from process_image import process_image, process_body
-#from layout_analyzer import analyze_document_layout, detect_logo, detect_headers_footers, detect_paragraphs, detect_tables, merge_overlapping_boxes
-#from layout_analyzer_v2 import analyze_document_layout, detect_logo, detect_tables, detect_text, merge_overlapping_boxes
 from layout_analyzer_v3 import analyze_document_layout, detect_logo, detect_tables, detect_text_improved, merge_close_text_boxes, merge_overlapping_boxes
-
+import combined
 
 # Directories
 input_dir = 'images'
@@ -95,7 +89,6 @@ for filename in os.listdir(body_dir):
 
 print (f"\n{bodies_already_processed} body file(s) left untouched, {bodies_newly_processed} body file(s) processed")
 
-
 #Process each header file
 headers_already_processed = 0
 headers_newly_processed =0
@@ -128,44 +121,8 @@ print (f"\n{headers_already_processed} header file(s) left untouched, {headers_n
 
 
 
+#combined2.process_exam_paper("D:\Anirudh\mini_project_2\images\sample1.jpg","outputs/testing/sample1_output_full.svg")
+
+#result, boxes = v2.analyze_document_layout('headers/sample14_header.jpg','outputs/test.jpg', display_steps= True)
 
 
-
-#result, boxes = analyze_document_layout('headers/sample1_header.jpg','outputs/test.jpg', display_steps= True)
-
-"""
-process_body('bodies/sample1_body.jpg', 'outputs/body_outputs/test1.jpg')
-process_body('bodies/sample2_body.jpg', 'outputs/body_outputs/test2.jpg')
-process_body('bodies/sample3_body.jpg', 'outputs/body_outputs/test3.jpg')
-"""
-#visualize_header_detection('images/sample8.jpg')
-
-"""
-#MAIN
-# Define paths
-input_image_path = 'images/sample1.jpg'  
-output_image_path = 'outputs/output_boxes1.jpg'
-header_path = 'headers/header1.jpg'
-body_path = 'bodies/body1.jpg'
-split_image_path = 'split_images'
-
-# Ensure output directory exists
-if not os.path.exists('outputs'):
-    os.makedirs('outputs')
-
-header, body, boundary= detect_header_with_instructions_and_show_boxes(input_image_path, header_path, body_path, split_image_path)
-print(f"Header/body boundary detected at y-coordinate: {boundary}")
-#display_image(header, "header")
-#display_image(body, "body")
-"""
-"""visualize_header_detection(
-    image_path=input_image_path,
-    show_text_boxes=True,  # Show all text bounding boxes
-    save_output=True,      # Save the output images
-    output_dir="outputs"    # Save to this directory
-)"""
-
-
-
-# Process the image
-#process_image(input_image_path, output_image_path)
