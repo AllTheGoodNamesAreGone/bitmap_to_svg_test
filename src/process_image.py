@@ -41,7 +41,7 @@ def process_body(image_path, output_path):
 
     #display_image(dilated, "step 3 - dilated")
     # Find contours (connected components)
-    contours, _ = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     #display_image(contours, "step 4 - contours")
 
     # List to store bounding boxes

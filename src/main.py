@@ -56,7 +56,7 @@ for filename in os.listdir(input_dir):
         except Exception as e:
             print(f"❌ Error processing {filename}: {e}")
 
-print (f"{already_processed} image file(s) left untouched, {newly_processed} image file(s) processed")
+print (f" \n ➡️\t {already_processed} image file(s) left untouched, {newly_processed} image file(s) processed")
 
 
 #Process each body file
@@ -87,7 +87,7 @@ for filename in os.listdir(body_dir):
         except Exception as e:
             print(f"❌ Error processing {filename}: {e}")
 
-print (f"\n{bodies_already_processed} body file(s) left untouched, {bodies_newly_processed} body file(s) processed")
+print (f"\n ➡️\t {bodies_already_processed} body file(s) left untouched, {bodies_newly_processed} body file(s) processed")
 
 #Process each header file
 headers_already_processed = 0
@@ -117,9 +117,11 @@ for filename in os.listdir(header_dir):
         except Exception as e:
             print(f"❌ Error processing {filename}: {e}")
 
-print (f"\n{headers_already_processed} header file(s) left untouched, {headers_newly_processed} header file(s) processed")
+print (f"\n ➡️\t {headers_already_processed} header file(s) left untouched, {headers_newly_processed} header file(s) processed\n")
 
 
+
+#process_body("bodies/sample15_body.jpg", "outputs/test.jpg")
 
 #combined2.process_exam_paper("D:\Anirudh\mini_project_2\images\sample1.jpg","outputs/testing/sample1_output_full.svg")
 
