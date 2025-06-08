@@ -7,7 +7,7 @@ import cv2
 from display_image import display_image
 import os
 
-
+#BODY PROCESSING -----------------------------
 
 def process_body(image_path, output_path):
     if not os.path.exists(image_path):
@@ -71,8 +71,7 @@ def process_body(image_path, output_path):
     print(f"Bounding boxes drawn and saved to {output_path}")
 
 
-def process_header (image_path, output_path):
-    None
+
 # Function to process image and find bounding boxes
 def process_image(image_path, output_path):
     # Read the image

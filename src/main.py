@@ -5,7 +5,8 @@ from get_header_line_based_improved import detect_header_with_instructions_and_s
 from display_image import display_image
 from process_image import process_image, process_body
 from layout_analyzer_v3 import analyze_document_layout, detect_logo, detect_tables, detect_text_improved, merge_close_text_boxes, merge_overlapping_boxes
-import combined
+import combined, combined2
+import headertrial
 
 # Directories
 input_dir = 'images'
@@ -120,6 +121,17 @@ for filename in os.listdir(header_dir):
 print (f"\n ➡️\t {headers_already_processed} header file(s) left untouched, {headers_newly_processed} header file(s) processed\n")
 
 
+
+#combined.generate_question_paper_svg("images\sample1.jpg", "outputs/testing/combined1.svg")
+combined.generate_question_paper_svg("images\sample2.jpg", "outputs/testing/combined2.svg")
+#combined2.process_exam_paper("images\sample1.jpg", "outputs/testing/combined22.svg")
+combined.generate_question_paper_svg("images\sample6.jpg", "outputs/testing/combined6.svg")
+combined.generate_question_paper_svg("images\sample7.jpg", "outputs/testing/combined7.svg")
+combined.generate_question_paper_svg("images\sample8.jpg", "outputs/testing/combined8.svg")
+
+#result, boxes = analyze_document_layout("headers/sample1_header.jpg","outputs/header1repeat.jpg", display_steps= False)
+
+#headertrial.generate_svg_from_detected_elements("headers/sample1_header.jpg", boxes, output_svg_path="outputs/header1trial.svg")
 
 #process_body("bodies/sample15_body.jpg", "outputs/test.jpg")
 
