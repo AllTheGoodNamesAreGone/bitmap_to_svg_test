@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1241" height="1754" viewBox="0 0 1241 1754" 
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <defs>
+        <style><![CDATA[
+            .header-region { fill: rgba(255, 255, 0, 0.1); stroke: #ff0000; stroke-width: 2; }
+            .body-region { fill: rgba(100, 100, 255, 0.1); stroke: #ff0000; stroke-width: 2; }
+            .text-box { fill: none; stroke: #00ff00; stroke-width: 2; }
+            .logo-box { fill: none; stroke: #0000ff; stroke-width: 3; }
+            .table-box { fill: none; stroke: #ff0000; stroke-width: 2; }
+            .boundary-line { stroke: #ff0000; stroke-width: 3; }
+            .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #000000; }
+            .region-label { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #ff0000; }
+            .element-group:hover { opacity: 0.8; }
+        ]]></style>
+        
+        <!-- Patterns for different element types -->
+        <pattern id="textPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+            <rect width="4" height="4" fill="#e6ffe6"/>
+            <circle cx="2" cy="2" r="1" fill="#00ff00"/>
+        </pattern>
+        
+        <pattern id="logoPattern" patternUnits="userSpaceOnUse" width="8" height="8">
+            <rect width="8" height="8" fill="#e6e6ff"/>
+            <path d="M0,0 L8,8 M8,0 L0,8" stroke="#0000ff" stroke-width="1"/>
+        </pattern>
+    </defs>
+    
+    <!-- Document regions group -->
+    <g id="document-regions">
+        <rect x="0" y="0" width="1241" height="608" class="header-region"/>
+        <rect x="0" y="608" width="1241" height="1146" class="body-region"/>
+        <line x1="0" y1="608" x2="1241" y2="608" class="boundary-line"/>
+        
+        <!-- Region labels -->
+        <text x="10" y="25" class="region-label">HEADER REGION</text>
+        <text x="10" y="638" class="region-label">BODY REGION</text>
+    </g>
+    
+    <!-- Text elements group -->
+    <g id="text-elements">
+        <g class="element-group" id="text-1">
+            <title>Text Element 1: \\\</title>
+            <rect x="14" y="31" width="57" height="85" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="14" y="26" class="label-text">TEXT: \\\</text>
+        </g>
+        <g class="element-group" id="text-2">
+            <title>Text Element 2: RAMAIAH</title>
+            <rect x="90" y="45" width="171" height="23" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="90" y="40" class="label-text">TEXT: RAMAIAH</text>
+        </g>
+        <g class="element-group" id="text-3">
+            <title>Text Element 3: ML) &amp; (AI Engineering and Science of Computer Dept. Technology Institute of</title>
+            <rect x="90" y="46" width="1107" height="44" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="90" y="41" class="label-text">TEXT: ML) &amp; (AI Engine...</text>
+        </g>
+        <g class="element-group" id="text-4">
+            <title>Text Element 4: Security) (Cyber Engineering and Science &amp; Computer</title>
+            <rect x="351" y="88" width="849" height="36" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="351" y="83" class="label-text">TEXT: Security) (Cyber Eng...</text>
+        </g>
+        <g class="element-group" id="text-5">
+            <title>Text Element 5: &amp; (AI&amp;ML) Engineering Science Computer</title>
+            <rect x="397" y="209" width="708" height="39" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="397" y="204" class="label-text">TEXT: &amp; (AI&amp;ML) En...</text>
+        </g>
+        <g class="element-group" id="text-6">
+            <title>Text Element 6: and Programme: B E —</title>
+            <rect x="116" y="217" width="607" height="31" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="116" y="212" class="label-text">TEXT: and Programme: B E —</text>
+        </g>
+        <g class="element-group" id="text-7">
+            <title>Text Element 7: Security) (Cyber Engineering Science Computer</title>
+            <rect x="399" y="255" width="772" height="37" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="399" y="250" class="label-text">TEXT: Security) (Cyber Eng...</text>
+        </g>
+        <g class="element-group" id="text-8">
+            <title>Text Element 8: and</title>
+            <rect x="672" y="262" width="53" height="23" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="672" y="257" class="label-text">TEXT: and</text>
+        </g>
+        <g class="element-group" id="text-9">
+            <title>Text Element 9: Internal Assessment</title>
+            <rect x="437" y="306" width="293" height="23" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="437" y="301" class="label-text">TEXT: Internal Assessment</text>
+        </g>
+        <g class="element-group" id="text-10">
+            <title>Text Element 10: I —</title>
+            <rect x="738" y="306" width="38" height="23" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="738" y="301" class="label-text">TEXT: I —</text>
+        </g>
+        <g class="element-group" id="text-11">
+            <title>Text Element 11: Learning 3%</title>
+            <rect x="167" y="389" width="960" height="21" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="167" y="384" class="label-text">TEXT: Learning 3%</text>
+        </g>
+        <g class="element-group" id="text-12">
+            <title>Text Element 12: 21* June 2025</title>
+            <rect x="337" y="390" width="133" height="17" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="337" y="385" class="label-text">TEXT: 21* June 2025</text>
+        </g>
+        <g class="element-group" id="text-13">
+            <title>Text Element 13: COURSE NAME: Introduction</title>
+            <rect x="637" y="391" width="315" height="17" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="637" y="386" class="label-text">TEXT: COURSE NAME: Introdu...</text>
+        </g>
+        <g class="element-group" id="text-14">
+            <title>Text Element 14: Deep March 2025 TERM:</title>
+            <rect x="84" y="391" width="950" height="21" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="84" y="386" class="label-text">TEXT: Deep March 2025 TERM...</text>
+        </g>
+        <g class="element-group" id="text-15">
+            <title>Text Element 15: to</title>
+            <rect x="314" y="394" width="17" height="14" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="314" y="389" class="label-text">TEXT: to</text>
+        </g>
+        <g class="element-group" id="text-16">
+            <title>Text Element 16: to</title>
+            <rect x="959" y="394" width="18" height="14" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="959" y="389" class="label-text">TEXT: to</text>
+        </g>
+        <g class="element-group" id="text-17">
+            <title>Text Element 17: 24-04-2025</title>
+            <rect x="161" y="432" width="105" height="17" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="161" y="427" class="label-text">TEXT: 24-04-2025</text>
+        </g>
+        <g class="element-group" id="text-18">
+            <title>Text Element 18: 11:00AM</title>
+            <rect x="289" y="432" width="86" height="16" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="289" y="427" class="label-text">TEXT: 11:00AM</text>
+        </g>
+        <g class="element-group" id="text-19">
+            <title>Text Element 19: 12:00AM</title>
+            <rect x="410" y="432" width="86" height="16" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="410" y="427" class="label-text">TEXT: 12:00AM</text>
+        </g>
+        <g class="element-group" id="text-20">
+            <title>Text Element 20: COURSE</title>
+            <rect x="637" y="432" width="96" height="17" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="637" y="427" class="label-text">TEXT: COURSE</text>
+        </g>
+        <g class="element-group" id="text-21">
+            <title>Text Element 21: CI62 CODE: DATE:</title>
+            <rect x="84" y="432" width="811" height="18" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="84" y="427" class="label-text">TEXT: CI62 CODE: DATE:</text>
+        </g>
+        <g class="element-group" id="text-22">
+            <title>Text Element 22: to</title>
+            <rect x="382" y="435" width="18" height="13" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="382" y="430" class="label-text">TEXT: to</text>
+        </g>
+        <g class="element-group" id="text-23">
+            <title>Text Element 23: MAX MARKS: 30</title>
+            <rect x="80" y="469" width="186" height="31" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="80" y="464" class="label-text">TEXT: MAX MARKS: 30</text>
+        </g>
+        <g class="element-group" id="text-24">
+            <title>Text Element 24: PORTIONS: L1-L26</title>
+            <rect x="636" y="474" width="218" height="18" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="636" y="469" class="label-text">TEXT: PORTIONS: L1-L26</text>
+        </g>
+        <g class="element-group" id="text-25">
+            <title>Text Element 25: ® Mobile Phones</title>
+            <rect x="92" y="508" width="205" height="55" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="92" y="503" class="label-text">TEXT: ® Mobile Phones</text>
+        </g>
+        <g class="element-group" id="text-26">
+            <title>Text Element 26: banned are</title>
+            <rect x="304" y="547" width="101" height="17" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="304" y="542" class="label-text">TEXT: banned are</text>
+        </g>
+        <g class="element-group" id="text-27">
+            <title>Text Element 27: Instructions</title>
+            <rect x="74" y="586" width="118" height="18" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="74" y="581" class="label-text">TEXT: Instructions</text>
+        </g>
+        <g class="element-group" id="text-28">
+            <title>Text Element 28: Candidates: Answer to</title>
+            <rect x="199" y="586" width="238" height="20" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="199" y="581" class="label-text">TEXT: Candidates: Answer t...</text>
+        </g>
+        <g class="element-group" id="text-29">
+            <title>Text Element 29: full</title>
+            <rect x="535" y="589" width="36" height="18" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="535" y="584" class="label-text">TEXT: full</text>
+        </g>
+        <g class="element-group" id="text-30">
+            <title>Text Element 30: Marks: questions.</title>
+            <rect x="578" y="589" width="492" height="19" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="578" y="584" class="label-text">TEXT: Marks: questions.</text>
+        </g>
+        <g class="element-group" id="text-31">
+            <title>Text Element 31: 15x2=30 two any</title>
+            <rect x="444" y="590" width="726" height="18" class="text-box" fill="url(#textPattern)" fill-opacity="0.3"/>
+            <text x="444" y="585" class="label-text">TEXT: 15x2=30 two any</text>
+        </g>
+    </g>
+
+    <!-- Logo elements group -->
+    <g id="logo-elements">
+        <g class="element-group" id="logo-1">
+            <title>Logo Element 1</title>
+            <rect x="10" y="26" width="66" height="94" class="logo-box" fill="url(#logoPattern)" fill-opacity="0.3"/>
+            <text x="10" y="21" class="label-text">LOGO 1</text>
+        </g>
+    </g>
+
+    <!-- Table elements group -->
+    <g id="table-elements">
+        <g class="element-group" id="table-1">
+            <title>Table Element 1</title>
+            <rect x="65" y="377" width="1148" height="142" class="table-box"/>
+            <text x="65" y="372" class="label-text">TABLE 1</text>
+        </g>
+    </g>
+</svg>

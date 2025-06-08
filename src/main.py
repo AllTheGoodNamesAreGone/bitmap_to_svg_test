@@ -7,6 +7,8 @@ from process_image import process_image, process_body
 from layout_analyzer_v3 import analyze_document_layout, detect_logo, detect_tables, detect_text_improved, merge_close_text_boxes, merge_overlapping_boxes
 import combined, combined2
 import headertrial
+import template_based_detector
+import highlight_regions
 
 # Directories
 input_dir = 'images'
@@ -121,13 +123,30 @@ for filename in os.listdir(header_dir):
 print (f"\n ➡️\t {headers_already_processed} header file(s) left untouched, {headers_newly_processed} header file(s) processed\n")
 
 
+#Template based attempt 
+#detector = template_based_detector.TemplateBasedDetector('templates/ramaiah_template.json')
+#detector.load_image("images/sample7.jpg")
+#results = detector.detect_all_regions()
+#detector.generate_svg_with_detections('output.svg', results)
+
+
+
+#Highlighting only 
+#highlight_regions.generate_highlighted_question_paper("images/sample1.jpg", "highlighted_output11.jpg")
+
+import create_svg_2
+
+create_svg_2.generate_content_svg("images/sample1.jpg", "output5.svg", debug_tables=True)
+
+
+#Miscellaneous testing below this ------------------------------------------------------------------------------------------------------------------------------------
 
 #combined.generate_question_paper_svg("images\sample1.jpg", "outputs/testing/combined1.svg")
-combined.generate_question_paper_svg("images\sample2.jpg", "outputs/testing/combined2.svg")
+#combined.generate_question_paper_svg("images\sample2.jpg", "outputs/testing/combined2.svg")
 #combined2.process_exam_paper("images\sample1.jpg", "outputs/testing/combined22.svg")
-combined.generate_question_paper_svg("images\sample6.jpg", "outputs/testing/combined6.svg")
-combined.generate_question_paper_svg("images\sample7.jpg", "outputs/testing/combined7.svg")
-combined.generate_question_paper_svg("images\sample8.jpg", "outputs/testing/combined8.svg")
+#combined.generate_question_paper_svg("images\sample6.jpg", "outputs/testing/combined6.svg")
+#combined.generate_question_paper_svg("images\sample7.jpg", "outputs/testing/combined7.svg")
+#combined.generate_question_paper_svg("images\sample8.jpg", "outputs/testing/combined8.svg")
 
 #result, boxes = analyze_document_layout("headers/sample1_header.jpg","outputs/header1repeat.jpg", display_steps= False)
 

@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "template_name": "ramaiah_question_paper",
+    "document_type": "academic_assessment",
+    "institution": "Ramaiah Institute of Technology",
+    "version": "1.0",
+    "description": "Template for Ramaiah IT question papers with consistent layout"
+  },
+  "layout": {
+    "header": {
+      "total_height_percent": 32,
+      "sections": {
+        "logo_and_dept": {
+          "y_percent": 0,
+          "height_percent": 8,
+          "regions": {
+            "logo": {
+              "x_percent": 0,
+              "y_percent": 0,
+              "width_percent": 25,
+              "height_percent": 8,
+              "type": "logo",
+              "description": "Ramaiah Institute logo"
+            },
+            "department_info": {
+              "x_percent": 26,
+              "y_percent": 0,
+              "width_percent": 74,
+              "height_percent": 8,
+              "type": "text",
+              "description": "Department name and specialization"
+            }
+          }
+        },
+        "program_title": {
+          "y_percent": 9,
+          "height_percent": 8,
+          "regions": {
+            "program_info": {
+              "x_percent": 0,
+              "y_percent": 9,
+              "width_percent": 100,
+              "height_percent": 8,
+              "type": "text",
+              "description": "Programme and assessment title"
+            }
+          }
+        },
+        "course_details_table": {
+          "y_percent": 18,
+          "height_percent": 10,
+          "regions": {
+            "course_table": {
+              "x_percent": 0,
+              "y_percent": 18,
+              "width_percent": 100,
+              "height_percent": 10,
+              "type": "table",
+              "description": "Course details in tabular format",
+              "table_structure": {
+                "rows": 3,
+                "columns": 4,
+                "header_row": false,
+                "cell_types": ["text", "text", "text", "text"]
+              }
+            }
+          }
+        },
+        "instructions": {
+          "y_percent": 29,
+          "height_percent": 3,
+          "regions": {
+            "mobile_ban": {
+              "x_percent": 0,
+              "y_percent": 29,
+              "width_percent": 30,
+              "height_percent": 3,
+              "type": "icon_text",
+              "description": "Mobile phones banned notice"
+            },
+            "candidate_instructions": {
+              "x_percent": 0,
+              "y_percent": 29,
+              "width_percent": 70,
+              "height_percent": 3,
+              "type": "text",
+              "description": "Instructions to candidates"
+            },
+            "marks_info": {
+              "x_percent": 70,
+              "y_percent": 29,
+              "width_percent": 30,
+              "height_percent": 3,
+              "type": "text",
+              "description": "Marks information (e.g., 15x2=30)"
+            }
+          }
+        }
+      }
+    },
+    "body": {
+      "start_y_percent": 32,
+      "height_percent": 68,
+      "sections": {
+        "question_table": {
+          "y_percent": 32,
+          "height_percent": 65,
+          "regions": {
+            "main_table": {
+              "x_percent": 0,
+              "y_percent": 32,
+              "width_percent": 100,
+              "height_percent": 65,
+              "type": "table",
+              "description": "Main questions table",
+              "table_structure": {
+                "columns": 5,
+                "column_widths": [8, 67, 8, 8, 9],
+                "column_names": ["Q.No", "Questions", "Blooms Levels", "CO", "Marks"],
+                "header_row": true,
+                "variable_rows": true
+              }
+            }
+          }
+        },
+        "footer": {
+          "y_percent": 97,
+          "height_percent": 3,
+          "regions": {
+            "bloom_legend": {
+              "x_percent": 0,
+              "y_percent": 97,
+              "width_percent": 100,
+              "height_percent": 3,
+              "type": "text",
+              "description": "Bloom's taxonomy legend (optional)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "detection_rules": {
+    "logo_detection": {
+      "method": "template_matching",
+      "fallback": "edge_density",
+      "region": "logo",
+      "parameters": {
+        "min_edge_density": 0.05,
+        "aspect_ratio_range": [0.8, 1.5]
+      }
+    },
+    "table_detection": {
+      "method": "line_intersection",
+      "regions": ["course_table", "main_table"],
+      "parameters": {
+        "min_horizontal_lines": 2,
+        "min_vertical_lines": 2,
+        "line_threshold": 40
+      }
+    },
+    "text_detection": {
+      "method": "ocr_with_regions",
+      "confidence_threshold": 30,
+      "merge_threshold": 20
+    }
+  },
+  "validation_rules": {
+    "required_regions": [
+      "logo", "department_info", "course_table", "main_table"
+    ],
+    "text_patterns": {
+      "department_info": ".*Dept.*Computer Science.*",
+      "program_info": ".*Programme.*",
+      "course_table": ".*COURSE.*"
+    }
+  }
+}
