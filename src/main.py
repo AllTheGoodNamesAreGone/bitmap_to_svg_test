@@ -136,8 +136,15 @@ print (f"\n ➡️\t {headers_already_processed} header file(s) left untouched, 
 
 import create_svg_2
 
-create_svg_2.generate_content_svg("images/sample1.jpg", "output5.svg", debug_tables=True)
+#create_svg_2.generate_content_svg("images/sample5.jpg", "output6.svg", debug_tables=True)
 
+
+import table_detection
+
+#table_detection.debug_table_detection_with_svg("images/sample6.jpg", "tables_only6.svg", "debug_tables_only6.jpg")
+
+
+import table_detection2
 
 #Miscellaneous testing below this ------------------------------------------------------------------------------------------------------------------------------------
 
