@@ -144,8 +144,12 @@ import table_detection
 #table_detection.debug_table_detection_with_svg("images/sample6.jpg", "tables_only6.svg", "debug_tables_only6.jpg")
 
 
-import table_detection2
+import table_detection_2
 
+table_detection_2.debug_table_detection_with_svg("images/sample1.jpg", "outputs/tables/tables_only1v2.svg", "outputs/tables/debug/debug_tables_only1v2.jpg")
+#table_detection.debug_table_detection_with_svg("images/sample11.jpg", "outputs/tables/tables_only11.svg", "outputs/tables/debug/debug_tables_only11.jpg")
+#table_detection.debug_table_detection_with_svg("images/sample12.jpg", "outputs/tables/tables_only12.svg", "outputs/tables/debug/debug_tables_only12.jpg")
+#table_detection.debug_table_detection_with_svg("images/sample13.jpg", "outputs/tables/tables_only13.svg", "outputs/tables/debug/debug_tables_only13.jpg")
 #Miscellaneous testing below this ------------------------------------------------------------------------------------------------------------------------------------
 
 #combined.generate_question_paper_svg("images\sample1.jpg", "outputs/testing/combined1.svg")

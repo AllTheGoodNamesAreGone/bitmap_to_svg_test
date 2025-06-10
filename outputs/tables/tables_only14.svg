@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2481" height="3508" viewBox="0 0 2481 3508" 
+     xmlns="http://www.w3.org/2000/svg">
+    
+    <defs>
+        <style><![CDATA[
+            .horizontal-line { 
+                stroke: #ff0000; 
+                stroke-width: 2; 
+                fill: none; 
+                opacity: 0.8;
+            }
+            .vertical-line { 
+                stroke: #0000ff; 
+                stroke-width: 2; 
+                fill: none; 
+                opacity: 0.8;
+            }
+            .table-boundary { 
+                fill: none; 
+                stroke: #00ff00; 
+                stroke-width: 2; 
+                stroke-dasharray: 5,5; 
+                opacity: 0.6;
+            }
+            .table-label {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                fill: #000000;
+            }
+        ]]></style>
+    </defs>
+    
+    <!-- White background -->
+    <rect width="2481" height="3508" fill="white"/>
+    
+    <!-- Table 1 -->
+    <g id="table_1">
+        <!-- Table boundary -->
+        <rect x="188" y="667" width="2238" height="2528" class="table-boundary"/>
+        
+        <!-- Table label -->
+        <text x="188" y="662" class="table-label">Table 1</text>
+        
+        <line x1="992" y1="675" x2="1443" y2="675" class="horizontal-line">
+            <title>Horizontal Line 1</title>
+        </line>
+        <line x1="224" y1="804" x2="1483" y2="804" class="horizontal-line">
+            <title>Horizontal Line 2</title>
+        </line>
+        <line x1="224" y1="890" x2="1509" y2="890" class="horizontal-line">
+            <title>Horizontal Line 3</title>
+        </line>
+        <line x1="225" y1="981" x2="1518" y2="981" class="horizontal-line">
+            <title>Horizontal Line 4</title>
+        </line>
+        <line x1="215" y1="1272" x2="1795" y2="1272" class="horizontal-line">
+            <title>Horizontal Line 5</title>
+        </line>
+        <line x1="217" y1="1378" x2="1811" y2="1378" class="horizontal-line">
+            <title>Horizontal Line 6</title>
+        </line>
+        <line x1="223" y1="1548" x2="2319" y2="1548" class="horizontal-line">
+            <title>Horizontal Line 7</title>
+        </line>
+        <line x1="218" y1="1864" x2="2400" y2="1864" class="horizontal-line">
+            <title>Horizontal Line 8</title>
+        </line>
+        <line x1="214" y1="2035" x2="2399" y2="2035" class="horizontal-line">
+            <title>Horizontal Line 9</title>
+        </line>
+        <line x1="209" y1="2263" x2="2412" y2="2263" class="horizontal-line">
+            <title>Horizontal Line 10</title>
+        </line>
+        <line x1="205" y1="2442" x2="2417" y2="2442" class="horizontal-line">
+            <title>Horizontal Line 11</title>
+        </line>
+        <line x1="200" y1="2622" x2="2417" y2="2622" class="horizontal-line">
+            <title>Horizontal Line 12</title>
+        </line>
+        <line x1="198" y1="2804" x2="2420" y2="2804" class="horizontal-line">
+            <title>Horizontal Line 13</title>
+        </line>
+        <line x1="196" y1="2992" x2="2422" y2="2992" class="horizontal-line">
+            <title>Horizontal Line 14</title>
+        </line>
+        <line x1="191" y1="3181" x2="2420" y2="3181" class="horizontal-line">
+            <title>Horizontal Line 15</title>
+        </line>
+        <line x1="217" y1="708" x2="217" y2="3009" class="vertical-line">
+            <title>Vertical Line 1</title>
+        </line>
+        <line x1="419" y1="1359" x2="419" y2="3080" class="vertical-line">
+            <title>Vertical Line 2</title>
+        </line>
+        <line x1="1310" y1="670" x2="1310" y2="994" class="vertical-line">
+            <title>Vertical Line 3</title>
+        </line>
+        <line x1="1828" y1="1256" x2="1828" y2="1840" class="vertical-line">
+            <title>Vertical Line 4</title>
+        </line>
+        <line x1="1864" y1="2501" x2="1864" y2="3191" class="vertical-line">
+            <title>Vertical Line 5</title>
+        </line>
+        <line x1="2077" y1="1244" x2="2077" y2="1957" class="vertical-line">
+            <title>Vertical Line 6</title>
+        </line>
+        <line x1="2112" y1="2507" x2="2112" y2="3189" class="vertical-line">
+            <title>Vertical Line 7</title>
+        </line>
+        <line x1="2237" y1="1236" x2="2237" y2="1982" class="vertical-line">
+            <title>Vertical Line 8</title>
+        </line>
+        <line x1="2264" y1="2473" x2="2264" y2="3185" class="vertical-line">
+            <title>Vertical Line 9</title>
+        </line>
+        <line x1="2328" y1="614" x2="2328" y2="950" class="vertical-line">
+            <title>Vertical Line 10</title>
+        </line>
+        <line x1="2402" y1="1230" x2="2402" y2="3182" class="vertical-line">
+            <title>Vertical Line 11</title>
+        </line>
+    </g>
+    
+    <!-- Legend -->
+    <g id="legend" transform="translate(10, 3408)">
+        <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="1"/>
+        <text x="10" y="15" class="table-label">Legend:</text>
+        <line x1="10" y1="25" x2="40" y2="25" class="horizontal-line"/>
+        <text x="45" y="29" style="font-size: 12px;">Horizontal Lines</text>
+        <line x1="10" y1="40" x2="40" y2="40" class="vertical-line"/>
+        <text x="45" y="44" style="font-size: 12px;">Vertical Lines</text>
+        <rect x="10" y="50" width="30" height="15" class="table-boundary"/>
+        <text x="45" y="59" style="font-size: 12px;">Table Boundary</text>
+    </g>
+    
+</svg>
