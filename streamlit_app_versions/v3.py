@@ -195,6 +195,100 @@ def process_body(image_path, output_path, adaptive_block_size=11, adaptive_c=5, 
         'visualization': img_with_boxes,
         'output_path': output_path
     }
+
+def analyze_document_layout(image_path, output_path, display_steps=False):
+    """
+    Enhanced document layout analysis for header region that identifies and draws 
+    bounding boxes around text, logos, and tables.
+    """
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"Image not found: {image_path}")
+    
+    # Read the image
+    original_img = cv2.imread(image_path)
+    if original_img is None:
+        print(f"Error: Could not read the image at {image_path}")
+        return None, {}
+    
+    # Create a copy for drawing results
+    result_img = original_img.copy()
+    
+    # Convert to grayscale
+    gray = cv2.cvtColor(original_img, cv2.COLOR_BGR2GRAY)
+    
+    # Get image dimensions
+    height, width = gray.shape
+    
+    # Create a mask for tracking detected regions (to avoid overlaps)
+    mask_detected = np.zeros((height, width), dtype=np.uint8)
+    
+    # Dictionary to store detected elements
+    detected_elements = {
+        "text": [],
+        "logos": [],
+        "tables": []
+    }
+    
+    # Step 1: Detect and extract the logo
+    logo_boxes = detect_logo(gray, height, width)
+    
+    # Add logo regions to the detected mask
+    for x, y, w, h in logo_boxes:
+        cv2.rectangle(mask_detected, (x, y), (x+w, y+h), 255, -1)
+        detected_elements["logos"].append((x, y, w, h))
+        # Draw red bounding box around logo
+        cv2.rectangle(result_img, (x, y), (x+w, y+h), (0, 0, 255), 2)
+        cv2.putText(result_img, "Logo", (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    
+    # Step 2: Detect tables using line detection techniques
+    table_boxes = detect_tables(gray, height, width)
+    
+    # Filter out tables that overlap with already detected elements
+    for box in table_boxes:
+        x, y, w, h = box
+        table_mask = np.zeros((height, width), dtype=np.uint8)
+        cv2.rectangle(table_mask, (x, y), (x+w, y+h), 255, -1)
+        
+        # Check overlap percentage
+        overlap = cv2.bitwise_and(table_mask, mask_detected)
+        overlap_percentage = np.sum(overlap > 0) / (w * h) if (w * h) > 0 else 0
+        
+        if overlap_percentage < 0.3:  # Less than 30% overlap
+            cv2.rectangle(mask_detected, (x, y), (x+w, y+h), 255, -1)
+            detected_elements["tables"].append(box)
+            # Draw blue bounding box around table
+            cv2.rectangle(result_img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+            cv2.putText(result_img, "Table", (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
+    
+    # Step 3: Detect text with improved parameters
+    text_boxes = detect_text_improved_header(gray, height, width, mask_detected)
+    
+    # Filter out text regions that overlap with already detected elements
+    for box in text_boxes:
+        x, y, w, h = box
+        text_mask = np.zeros((height, width), dtype=np.uint8)
+        cv2.rectangle(text_mask, (x, y), (x+w, y+h), 255, -1)
+        
+        # Check overlap percentage
+        overlap = cv2.bitwise_and(text_mask, mask_detected)
+        overlap_percentage = np.sum(overlap > 0) / (w * h) if (w * h) > 0 else 0
+        
+        if overlap_percentage < 0.3:  # Less than 30% overlap
+            cv2.rectangle(mask_detected, (x, y), (x+w, y+h), 255, -1)
+            detected_elements["text"].append(box)
+            # Draw green bounding box around text
+            cv2.rectangle(result_img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            cv2.putText(result_img, "Text", (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+    
+    # Save the result
+    cv2.imwrite(output_path, result_img)
+    
+    return {
+        'result_img': result_img,
+        'detected_elements': detected_elements,
+        'gray': gray,
+        'mask_detected': mask_detected
+    }
     """
     Enhanced document layout analysis for header region that identifies and draws 
     bounding boxes around text, logos, and tables.
