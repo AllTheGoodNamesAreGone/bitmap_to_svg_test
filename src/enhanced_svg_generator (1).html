@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Question Paper SVG Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .output-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px 0 0;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .sample-buttons {
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .sample-buttons button {
+            background: #28a745;
+            font-size: 11px;
+            padding: 5px 8px;
+        }
+        .sample-buttons button:hover {
+            background: #1e7e34;
+        }
+        .upload-area {
+            border: 2px dashed #007bff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px 0;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .upload-area:hover {
+            border-color: #0056b3;
+            background: #e3f2fd;
+        }
+        .upload-area.dragover {
+            border-color: #28a745;
+            background: #e8f5e8;
+        }
+        .upload-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+        .upload-button {
+            background: #17a2b8;
+        }
+        .upload-button:hover {
+            background: #138496;
+        }
+        .export-button {
+            background: #6f42c1;
+        }
+        .export-button:hover {
+            background: #5a359a;
+        }
+        #jsonFileInput {
+            display: none;
+        }
+        #svgOutput {
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            max-width: 100%;
+            overflow: auto;
+            max-height: 800px;
+            background: white;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ffe6e6;
+            border-radius: 4px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e6ffe6;
+            border-radius: 4px;
+        }
+        .controls-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .controls-row label {
+            font-weight: bold;
+            min-width: 120px;
+        }
+        .controls-row input {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .enhancement-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 13px;
+            color: #0c5460;
+            border-left: 4px solid #007bff;
+        }
+        .enhancement-info h4 {
+            margin: 0 0 8px 0;
+            color: #007bff;
+        }
+        .file-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .file-info strong {
+            color: #856404;
+        }
+        .upload-icon {
+            font-size: 48px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .upload-text {
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Question Paper SVG Generator</h1>
+        
+        <div class="enhancement-info">
+            <h4>🚀 New Features:</h4>
+            • Hierarchy-based font sizing • Text weight & alignment control • Enhanced matrix rendering<br>
+            • Smart header typography • Multi-line text support • Document metadata handling • <strong>JSON File Upload</strong>
+        </div>
+        
+        <div class="controls">
+            <h3>JSON Input</h3>
+            
+            <!-- File Upload Area -->
+            <div class="upload-area" id="uploadArea" onclick="document.getElementById('jsonFileInput').click()">
+                <div class="upload-icon">📄</div>
+                <div class="upload-text">
+                    <strong>Click to upload JSON file</strong> or drag and drop here<br>
+                    <small>Supports .json files and text files containing JSON data</small>
+                </div>
+            </div>
+            <input type="file" id="jsonFileInput" accept=".json,.txt" />
+            
+            <div class="upload-buttons">
+                <button class="upload-button" onclick="document.getElementById('jsonFileInput').click()">📂 Upload JSON File</button>
+                <button class="export-button" onclick="exportCurrentJSON()">💾 Export Current JSON</button>
+            </div>
+            
+            <div id="fileInfo" class="file-info" style="display: none;">
+                <strong>Loaded:</strong> <span id="fileName"></span> 
+                (<span id="fileSize"></span> bytes, <span id="elementCount"></span> elements)
+            </div>
+            
+            <div class="sample-buttons">
+                <button onclick="loadSample('sample1')">✨ Enhanced Sample (Deep Learning)</button>
+                <button onclick="loadSample('sample2')">Sample 2 (Simple Header)</button>
+                <button onclick="loadSample('sample3')">Sample 3 (Management)</button>
+            </div>
+            
+            <textarea id="jsonInput" placeholder="Paste your enhanced JSON annotation here or upload a JSON file above..."></textarea>
+            
+            <div class="controls-row">
+                <label>Font Scale:</label>
+                <input type="range" id="fontScale" min="0.7" max="1.5" step="0.1" value="1.0" onchange="updateFontScale()">
+                <span id="fontScaleValue">1.0</span>
+                <small>(Auto-optimized: 1.0)</small>
+            </div>
+            
+            <div class="controls-row">
+                <label>Line Spacing:</label>
+                <input type="range" id="lineSpacing" min="1.0" max="1.8" step="0.1" value="1.3" onchange="updateLineSpacing()">
+                <span id="lineSpacingValue">1.3</span>
+                <small>(Auto-optimized: 1.3)</small>
+            </div>
+            
+            <div class="controls-row">
+                <label>Cell Padding:</label>
+                <input type="range" id="cellPadding" min="2" max="8" step="1" value="4" onchange="updateCellPadding()">
+                <span id="cellPaddingValue">4px</span>
+                <small>(Auto-optimized: 4px)</small>
+            </div>
+            
+            <br>
+            <button onclick="generateSVG()">🎯 Generate Enhanced SVG</button>
+            <button onclick="downloadSVG()">📥 Download SVG</button>
+            <button onclick="addImageToJSON()">🖼️ Add Image to JSON</button>
+            <button onclick="clearAll()">🗑️ Clear</button>
+            <div id="message"></div>
+        </div>
+        
+        <div class="output-container">
+            <h3>Generated SVG Preview</h3>
+            <div id="svgOutput"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentSVG = '';
+        let currentConfig = {
+            fontScale: 1.0,
+            lineSpacing: 1.3,
+            cellPadding: 4
+        };
+        let currentFileName = '';
+        
+        // Enhanced sample data with smart formatting
+        const samples = {
+            sample1: '[{"document_metadata":{"total_questions":3,"total_marks":30,"question_structure":"answer_any_two","assessment_type":"internal_1","marks_per_question":15}},{"label":"LOGO","bbox":[10,20,60,70],"type":"university_logo"},{"label":"HEADER_PRIMARY","bbox":[65,20,250,50],"text_blocks":[{"text":"RAMAIAH","bbox":[65,20,180,35],"content_type":"institute_name_primary","hierarchy_level":1,"text_weight":"bold"},{"text":"Institute of Technology","bbox":[65,37,250,50],"content_type":"institute_name_secondary","hierarchy_level":2,"text_weight":"normal"}]},{"label":"HEADER_DEPARTMENT","bbox":[260,20,780,70],"text_blocks":[{"text":"Dept. of Computer Science and Engineering (AI & ML)","bbox":[260,20,780,40],"content_type":"department_name_primary","hierarchy_level":1,"text_weight":"bold"},{"text":"& Computer Science and Engineering (Cyber Security)","bbox":[260,42,780,62],"content_type":"department_name_secondary","hierarchy_level":2,"text_weight":"bold"}]},{"label":"TITLE_SECTION","bbox":[85,95,710,180],"text_blocks":[{"text":"Programme: B E – Computer Science and Engineering (AI&ML) &","bbox":[85,95,710,120],"content_type":"programme_title_primary","hierarchy_level":1,"text_align":"center","text_weight":"bold"},{"text":"Computer Science and Engineering (Cyber Security)","bbox":[150,125,650,150],"content_type":"programme_title_continuation","hierarchy_level":1,"text_align":"center","text_weight":"bold"},{"text":"Internal Assessment – I","bbox":[270,155,530,180],"content_type":"assessment_title_main","hierarchy_level":1,"text_align":"center","emphasis":"underline","text_weight":"bold"}]},{"label":"TABLE_METADATA","bbox":[50,190,750,280],"type":"key_value","rows":[{"cells":[{"text":"TERM: 3rd March 2025 to 21st June 2025","bbox":[52,192,398,218],"content_type":"metadata_header_primary","text_weight":"bold","hierarchy_level":2},{"text":"COURSE NAME: Introduction to Deep Learning","bbox":[402,192,748,218],"content_type":"metadata_header_primary","text_weight":"bold","hierarchy_level":2}]},{"cells":[{"text":"DATE: 24-04-2025 11:00AM to 12:00PM","bbox":[52,222,398,248],"content_type":"metadata_header_primary","text_weight":"bold","hierarchy_level":2},{"text":"COURSE CODE: CI62","bbox":[402,222,748,248],"content_type":"metadata_header_primary","text_weight":"bold","hierarchy_level":2}]},{"cells":[{"text":"MAX MARKS: 30","bbox":[52,252,398,278],"content_type":"metadata_header_primary","text_weight":"bold","hierarchy_level":2},{"text":"PORTIONS: L1-L26","bbox":[402,252,748,278],"content_type":"metadata_header_primary","text_weight":"bold","hierarchy_level":2}]}]},{"label":"ICON","bbox":[50,290,90,330],"type":"no_mobile_phone"},{"label":"TEXT_INSTRUCTION","bbox":[95,300,280,320],"text":"Mobile Phones are banned","content_type":"instruction_header","text_weight":"bold","hierarchy_level":2},{"label":"INSTRUCTIONS_MAIN","bbox":[55,340,490,365],"text":"Instructions to Candidates: Answer any two full questions.","content_type":"instruction_header_primary","text_weight":"bold","hierarchy_level":1},{"label":"MARKS_SUMMARY","bbox":[620,340,750,365],"text":"Marks: 15x2=30","content_type":"marks_header","text_weight":"bold","text_align":"right","hierarchy_level":1},{"label":"TABLE_QUESTIONS","bbox":[50,375,750,920],"type":"questions_table","header":[{"cells":[{"text":"Q.No","bbox":[52,377,90,417],"content_type":"table_header_center","text_weight":"bold"},{"text":"Questions","bbox":[92,377,580,417],"content_type":"table_header_center","text_weight":"bold"},{"text":"Blooms Levels (L1 to L6)*","bbox":[582,377,640,417],"content_type":"table_header_center_multiline","text_weight":"bold","line_breaks":["Blooms","Levels","(L1 to","L6)*"]},{"text":"CO","bbox":[642,377,680,417],"content_type":"table_header_center","text_weight":"bold"},{"text":"Marks","bbox":[682,377,748,417],"content_type":"table_header_center","text_weight":"bold"}]}],"body":[{"question_group":"1","cells":[{"text":"1.a","bbox":[52,420,90,470],"content_type":"question_number","text_weight":"bold","text_align":"center"},{"text":"Discuss how the Perceptron functions as the basic structural element in building neural networks with a neat diagram.","bbox":[92,420,580,470],"content_type":"question_text","text_align":"left"},{"text":"L2","bbox":[582,420,640,470],"content_type":"table_data_center"},{"text":"CO1","bbox":[642,420,680,470],"content_type":"table_data_center"},{"text":"4","bbox":[682,420,748,470],"content_type":"table_data_center"}]},{"question_group":"1","cells":[{"text":"b","bbox":[52,475,90,540],"content_type":"question_number_sub","text_align":"center"},{"text":"Describe Categorical Cross Entropy (CCE) and Binary Cross-Entropy (BCE). For the given output of Softmax activation [0.7,0.1,0.2] and targets [1,0,0], Calculate the CCE Loss.","bbox":[92,475,580,540],"content_type":"question_text","text_align":"left"},{"text":"L3","bbox":[582,475,640,540],"content_type":"table_data_center"},{"text":"CO2","bbox":[642,475,680,540],"content_type":"table_data_center"},{"text":"2*3","bbox":[682,475,748,540],"content_type":"table_data_center"}]},{"question_group":"1","cells":[{"text":"c","bbox":[52,545,90,610],"content_type":"question_number_sub","text_align":"center"},{"text":"Explain the steps involved in how a Convolutional Neural Network (CNN) classifies image data.","bbox":[92,545,580,610],"content_type":"question_text","text_align":"left"},{"text":"L2","bbox":[582,545,640,610],"content_type":"table_data_center"},{"text":"CO3","bbox":[642,545,680,610],"content_type":"table_data_center"},{"text":"5","bbox":[682,545,748,610],"content_type":"table_data_center"}]},{"question_group":"2","cells":[{"text":"2.a","bbox":[52,615,90,665],"content_type":"question_number","text_weight":"bold","text_align":"center"},{"text":"Differentiate Biological Neuron and Artificial Neuron.","bbox":[92,615,580,665],"content_type":"question_text","text_align":"left"},{"text":"L2","bbox":[582,615,640,665],"content_type":"table_data_center"},{"text":"CO1","bbox":[642,615,680,665],"content_type":"table_data_center"},{"text":"5","bbox":[682,615,748,665],"content_type":"table_data_center"}]},{"question_group":"2","cells":[{"text":"b","bbox":[52,670,90,720],"content_type":"question_number_sub","text_align":"center"},{"text":"Derive the update rule for Gradient Descent used to minimize a given loss function.","bbox":[92,670,580,720],"content_type":"question_text","text_align":"left"},{"text":"L3","bbox":[582,670,640,720],"content_type":"table_data_center"},{"text":"CO2","bbox":[642,670,680,720],"content_type":"table_data_center"},{"text":"6","bbox":[682,670,748,720],"content_type":"table_data_center"}]},{"question_group":"2","cells":[{"text":"c","bbox":[52,725,90,880],"content_type":"question_number_sub","text_align":"center"},{"text_blocks":[{"text":"What is Pooling Operation in CNN? Perform max pooling and average pooling for the given feature map in Fig.2c. by considering a 2×2 Window with stride = 2","bbox":[92,725,580,775],"content_type":"question_text","text_align":"left"},{"label":"FIGURE","bbox":[280,785,420,835],"type":"matrix_4x4","content_type":"figure_matrix","text":"1   3   2   4\\n5   6   7   8\\n9  10  11  12\\n13 14  15  16","matrix_data":[[1,3,2,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]},{"label":"FIGURE_CAPTION","bbox":[330,845,370,860],"text":"Fig.2c","content_type":"figure_caption","text_align":"center"}],"bbox":[92,725,580,880]},{"text":"L3","bbox":[582,725,640,880],"content_type":"table_data_center"},{"text":"CO3","bbox":[642,725,680,880],"content_type":"table_data_center"},{"text":"4","bbox":[682,725,748,880],"content_type":"table_data_center"}]},{"question_group":"3","cells":[{"text":"3.a","bbox":[52,885,90,920],"content_type":"question_number","text_weight":"bold","text_align":"center"},{"text":"Explain the Softmax and ReLU activation functions with graph representations. Illustrate the concept of dead neurons in a neural network.","bbox":[92,885,580,920],"content_type":"question_text","text_align":"left"},{"text":"L2","bbox":[582,885,640,920],"content_type":"table_data_center"},{"text":"CO1","bbox":[642,885,680,920],"content_type":"table_data_center"},{"text":"5","bbox":[682,885,748,920],"content_type":"table_data_center"}]}]}]',
+            
+            sample2: '[{"label":"LOGO","bbox":[10,20,60,70],"type":"university_logo"},{"label":"HEADER","bbox":[65,20,250,50],"text_blocks":[{"text":"RAMAIAH","bbox":[65,20,180,35],"content_type":"institute_name_primary","hierarchy_level":1},{"text":"Institute of Technology","bbox":[65,37,250,50],"content_type":"institute_name_secondary","hierarchy_level":2}]}]',
+            
+            sample3: '[{"label":"HEADER","bbox":[200,30,600,120],"text_blocks":[{"text":"Ramaiah Institute of Technology","bbox":[250,30,550,55],"content_type":"programme_title_primary","hierarchy_level":1,"text_align":"center"},{"text":"(Autonomous Institute, Affiliated to VTU)","bbox":[240,60,560,80],"content_type":"institute_name_secondary","hierarchy_level":2,"text_align":"center"},{"text":"Programme: Common to all branches of B.E.","bbox":[230,90,570,115],"content_type":"programme_title_continuation","hierarchy_level":2,"text_align":"center"}]}]'
+        };
+
+        // File upload functionality
+        function setupFileUpload() {
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('jsonFileInput');
+            
+            // Prevent default drag behaviors
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                uploadArea.addEventListener(eventName, preventDefaults, false);
+                document.body.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            // Highlight drop area when item is dragged over it
+            ['dragenter', 'dragover'].forEach(eventName => {
+                uploadArea.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                uploadArea.addEventListener(eventName, unhighlight, false);
+            });
+            
+            // Handle dropped files
+            uploadArea.addEventListener('drop', handleDrop, false);
+            
+            // Handle file input change
+            fileInput.addEventListener('change', function(e) {
+                handleFiles(e.target.files);
+            });
+        }
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        function highlight(e) {
+            document.getElementById('uploadArea').classList.add('dragover');
+        }
+        
+        function unhighlight(e) {
+            document.getElementById('uploadArea').classList.remove('dragover');
+        }
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+        
+        function handleFiles(files) {
+            if (files.length === 0) return;
+            
+            const file = files[0];
+            
+            // Check file type
+            if (!file.name.toLowerCase().endsWith('.json') && !file.name.toLowerCase().endsWith('.txt')) {
+                showMessage('Please select a JSON file (.json) or text file (.txt)', 'error');
+                return;
+            }
+            
+            // Check file size (max 10MB)
+            if (file.size > 10 * 1024 * 1024) {
+                showMessage('File size too large. Please select a file smaller than 10MB.', 'error');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const content = e.target.result;
+                    
+                    // Try to parse as JSON to validate
+                    const jsonData = JSON.parse(content);
+                    
+                    // Update UI
+                    document.getElementById('jsonInput').value = JSON.stringify(jsonData, null, 2);
+                    
+                    // Show file info
+                    updateFileInfo(file.name, file.size, jsonData.length || Object.keys(jsonData).length);
+                    currentFileName = file.name;
+                    
+                    showMessage(`📂 Successfully loaded "${file.name}"!`);
+                    
+                    // Auto-generate SVG if the JSON looks valid
+                    if (Array.isArray(jsonData) && jsonData.length > 0) {
+                        setTimeout(() => {
+                            generateSVG();
+                        }, 500);
+                    }
+                    
+                } catch (error) {
+                    showMessage('Error parsing JSON file: ' + error.message, 'error');
+                    console.error('JSON Parse Error:', error);
+                }
+            };
+            
+            reader.onerror = function() {
+                showMessage('Error reading file', 'error');
+            };
+            
+            reader.readAsText(file);
+        }
+        
+        function updateFileInfo(fileName, fileSize, elementCount) {
+            document.getElementById('fileName').textContent = fileName;
+            document.getElementById('fileSize').textContent = fileSize.toLocaleString();
+            document.getElementById('elementCount').textContent = elementCount;
+            document.getElementById('fileInfo').style.display = 'block';
+        }
+        
+        function hideFileInfo() {
+            document.getElementById('fileInfo').style.display = 'none';
+            currentFileName = '';
+        }
+        
+        function exportCurrentJSON() {
+            const jsonInput = document.getElementById('jsonInput').value.trim();
+            
+            if (!jsonInput) {
+                showMessage('No JSON data to export', 'error');
+                return;
+            }
+            
+            try {
+                // Validate JSON before export
+                const jsonData = JSON.parse(jsonInput);
+                const prettyJSON = JSON.stringify(jsonData, null, 2);
+                
+                // Create and download file
+                const blob = new Blob([prettyJSON], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = currentFileName || 'question_paper_data.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                showMessage('💾 JSON file exported successfully!');
+            } catch (error) {
+                showMessage('Error exporting JSON: ' + error.message, 'error');
+            }
+        }
+
+        function updateFontScale() {
+            const scale = document.getElementById('fontScale').value;
+            document.getElementById('fontScaleValue').textContent = scale;
+            currentConfig.fontScale = parseFloat(scale);
+        }
+
+        function updateLineSpacing() {
+            const spacing = document.getElementById('lineSpacing').value;
+            document.getElementById('lineSpacingValue').textContent = spacing;
+            currentConfig.lineSpacing = parseFloat(spacing);
+        }
+
+        function updateCellPadding() {
+            const padding = document.getElementById('cellPadding').value;
+            document.getElementById('cellPaddingValue').textContent = padding + 'px';
+            currentConfig.cellPadding = parseInt(padding);
+        }
+
+        function loadSample(sampleKey) {
+            if (samples[sampleKey]) {
+                document.getElementById('jsonInput').value = samples[sampleKey];
+                hideFileInfo();
+                showMessage('✨ Enhanced sample loaded with new features!');
+            } else {
+                showMessage('Sample ' + sampleKey + ' not found', 'error');
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('jsonInput').value = '';
+            document.getElementById('svgOutput').innerHTML = '';
+            document.getElementById('message').innerHTML = '';
+            document.getElementById('jsonFileInput').value = '';
+            hideFileInfo();
+            currentSVG = '';
+        }
+
+        function showMessage(text, type) {
+            type = type || 'success';
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = '<div class="' + type + '">' + text + '</div>';
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 3000);
+        }
+
+        class EnhancedSVGGenerator {
+            constructor(config) {
+                config = config || {};
+                this.config = {
+                    fontScale: config.fontScale || 1.0,
+                    lineSpacing: config.lineSpacing || 1.3,
+                    cellPadding: config.cellPadding || 4,
+                    baseFontSize: 11,
+                    fontFamily: 'Arial, sans-serif',
+                    monospaceFamily: 'Courier New, monospace'
+                };
+                
+                // Enhanced smart content type configurations with hierarchy support
+                this.contentTypeConfig = {
+                    // Institute & Department Headers (Hierarchy Level 1 & 2)
+                    'institute_name_primary': { fontSize: 18, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'institute_name_secondary': { fontSize: 12, fontWeight: 'normal', textAlign: 'left', lineHeight: 1.2 },
+                    'department_name_primary': { fontSize: 16, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'department_name_secondary': { fontSize: 14, fontWeight: 'normal', textAlign: 'left', lineHeight: 1.2 },
+                    
+                    // Programme & Assessment Titles
+                    'programme_title_primary': { fontSize: 18, fontWeight: 'bold', textAlign: 'center', lineHeight: 1.2 },
+                    'programme_title_continuation': { fontSize: 16, fontWeight: 'bold', textAlign: 'center', lineHeight: 1.2 },
+                    'assessment_title_main': { fontSize: 16, fontWeight: 'bold', textAlign: 'center', textDecoration: 'underline', lineHeight: 1.2 },
+                    
+                    // Legacy support
+                    'main_title': { fontSize: 18, fontWeight: 'bold', textAlign: 'center', lineHeight: 1.2 },
+                    'assessment_title': { fontSize: 16, fontWeight: 'bold', textAlign: 'center', textDecoration: 'underline' },
+                    'institute_name': { fontSize: 16, fontWeight: 'bold', textAlign: 'left' },
+                    'institute_subtitle': { fontSize: 12, fontWeight: 'normal', textAlign: 'left' },
+                    'department_name': { fontSize: 14, fontWeight: 'bold', textAlign: 'left' },
+                    'programme_title': { fontSize: 16, fontWeight: 'bold', textAlign: 'center' },
+                    'subtitle': { fontSize: 12, fontWeight: 'normal', textAlign: 'center' },
+                    
+                    // Instructions & Metadata (Header Format)
+                    'instruction_header_primary': { fontSize: 14, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'instruction_header': { fontSize: 12, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'marks_header': { fontSize: 12, fontWeight: 'bold', textAlign: 'right', lineHeight: 1.2 },
+                    'metadata_header_primary': { fontSize: 12, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    
+                    // Legacy support
+                    'instruction_primary': { fontSize: 12, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'instruction_warning': { fontSize: 11, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'marks_calculation': { fontSize: 11, fontWeight: 'bold', textAlign: 'right', lineHeight: 1.2 },
+                    'metadata_label_value': { fontSize: 10, fontWeight: 'bold', textAlign: 'left', lineHeight: 1.2 },
+                    'instruction': { fontSize: 11, fontWeight: 'bold', textAlign: 'left' },
+                    'marks_info': { fontSize: 11, fontWeight: 'bold', textAlign: 'right' },
+                    'metadata': { fontSize: 10, fontWeight: 'normal', textAlign: 'left' },
+                    
+                    // Table Headers
+                    'table_header_center': { fontSize: 11, fontWeight: 'bold', textAlign: 'center', lineHeight: 1.1 },
+                    'table_header_center_multiline': { fontSize: 10, fontWeight: 'bold', textAlign: 'center', lineHeight: 1.0 },
+                    'table_header': { fontSize: 10, fontWeight: 'bold', textAlign: 'center' },
+                    
+                    // Question Content
+                    'question_number': { fontSize: 11, fontWeight: 'bold', textAlign: 'center', lineHeight: 1.2 },
+                    'question_number_sub': { fontSize: 10, fontWeight: 'normal', textAlign: 'center', lineHeight: 1.2 },
+                    'question_text': { fontSize: 10, fontWeight: 'normal', textAlign: 'left', lineHeight: 1.3 },
+                    
+                    // Table Data
+                    'table_data_center': { fontSize: 10, fontWeight: 'normal', textAlign: 'center' },
+                    'table_data_left': { fontSize: 10, fontWeight: 'normal', textAlign: 'left' },
+                    
+                    // Figures & Mathematics
+                    'figure_matrix': { fontSize: 9, fontFamily: 'Courier New, monospace', textAlign: 'center', lineHeight: 1.2 },
+                    'figure_caption': { fontSize: 9, fontWeight: 'normal', textAlign: 'center', lineHeight: 1.1 },
+                    'figure_text': { fontSize: 8, fontFamily: 'Courier New, monospace', textAlign: 'center' }
+                };
+            }
+
+            generateSVG(jsonData) {
+                try {
+                    const elements = JSON.parse(jsonData);
+                    
+                    // Skip document metadata when calculating bounds
+                    const renderableElements = elements.filter(el => !el.document_metadata);
+                    
+                    const svgBounds = this.calculateSVGBounds(renderableElements);
+                    
+                    let svg = '<svg width="' + (svgBounds.width + 40) + '" height="' + (svgBounds.height + 40) + '" xmlns="http://www.w3.org/2000/svg" style="background: white; border: 1px solid #ccc;">';
+                    
+                    svg += this.generateStyles();
+                    
+                    renderableElements.forEach(element => {
+                        svg += this.renderElement(element);
+                    });
+                    
+                    svg += '</svg>';
+                    return svg;
+                } catch (error) {
+                    throw new Error('SVG Generation Error: ' + error.message);
+                }
+            }
+
+            calculateSVGBounds(elements) {
+                let maxX = 0, maxY = 0;
+                
+                const processBbox = (bbox) => {
+                    if (bbox && bbox.length >= 4) {
+                        maxX = Math.max(maxX, bbox[2]);
+                        maxY = Math.max(maxY, bbox[3]);
+                    }
+                };
+                
+                elements.forEach(element => {
+                    processBbox(element.bbox);
+                    
+                    if (element.text_blocks) {
+                        element.text_blocks.forEach(block => {
+                            processBbox(block.bbox);
+                        });
+                    }
+                    
+                    if (element.header || element.body || element.rows) {
+                        const allRows = [].concat(element.header || []).concat(element.body || []).concat(element.rows || []);
+                        allRows.forEach(row => {
+                            if (row.cells) {
+                                row.cells.forEach(cell => {
+                                    processBbox(cell.bbox);
+                                    if (cell.text_blocks) {
+                                        cell.text_blocks.forEach(block => processBbox(block.bbox));
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+                
+                return { width: Math.max(800, maxX), height: Math.max(600, maxY) };
+            }
+
+            generateStyles() {
+                return '<defs><style>' +
+                    '.text-bold { font-weight: bold; }' +
+                    '.text-underline { text-decoration: underline; }' +
+                    '.text-italic { font-style: italic; }' +
+                    '.text-center { text-anchor: middle; }' +
+                    '.text-left { text-anchor: start; }' +
+                    '.text-right { text-anchor: end; }' +
+                    '.table-border { stroke: #000; stroke-width: 1; fill: none; }' +
+                    '.table-header { fill: #f8f9fa; stroke: #000; stroke-width: 1; }' +
+                    '.table-cell { fill: white; stroke: #000; stroke-width: 0.5; }' +
+                    '.logo-placeholder { fill: #e9ecef; stroke: #6c757d; stroke-width: 2; }' +
+                    '.icon-placeholder { fill: none; stroke: #dc3545; stroke-width: 2; }' +
+                    '.figure-bg { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 1; }' +
+                    '</style></defs>';
+            }
+
+            getSmartTextConfig(contentType, bbox, element = {}) {
+                const config = this.contentTypeConfig[contentType] || this.contentTypeConfig['table_data_left'];
+                const [x, y, x2, y2] = bbox;
+                const width = x2 - x;
+                const height = y2 - y;
+                
+                // Start with base font size from content type
+                let fontSize = (config.fontSize || this.config.baseFontSize) * this.config.fontScale;
+                
+                // Apply hierarchy level scaling
+                if (element.hierarchy_level) {
+                    const hierarchyMultiplier = element.hierarchy_level === 1 ? 1.2 : 
+                                              element.hierarchy_level === 2 ? 1.0 : 0.9;
+                    fontSize *= hierarchyMultiplier;
+                }
+                
+                // Auto-adjust font size based on container size (but be less aggressive for headers)
+                const isHeader = contentType.includes('name') || contentType.includes('title') || contentType.includes('header');
+                if (!isHeader) {
+                    // For very narrow cells, reduce font size
+                    if (width < 50) {
+                        fontSize = Math.min(fontSize, 8);
+                    } else if (width < 80) {
+                        fontSize = Math.min(fontSize, 9);
+                    }
+                    
+                    // For very short cells, reduce font size
+                    if (height < 25) {
+                        fontSize = Math.min(fontSize, 9);
+                    }
+                }
+                
+                // Override text properties from element if specified
+                const textWeight = element.text_weight || config.fontWeight || 'normal';
+                const textAlign = element.text_align || config.textAlign || 'left';
+                const emphasis = element.emphasis || config.textDecoration || 'none';
+                
+                return {
+                    fontSize: fontSize,
+                    fontWeight: textWeight,
+                    textAlign: textAlign,
+                    textDecoration: emphasis,
+                    lineHeight: config.lineHeight || this.config.lineSpacing,
+                    fontFamily: config.fontFamily || this.config.fontFamily
+                };
+            }
+
+            renderElement(element) {
+                switch (element.label) {
+                    case 'LOGO':
+                        return this.renderLogo(element);
+                    case 'HEADER':
+                    case 'HEADER_PRIMARY':
+                    case 'HEADER_DEPARTMENT':
+                    case 'TITLE':
+                    case 'TITLE_SECTION':
+                    case 'TEXT':
+                    case 'TEXT_INSTRUCTION':
+                    case 'INSTRUCTIONS':
+                    case 'INSTRUCTIONS_MAIN':
+                    case 'FOOTER':
+                    case 'METADATA':
+                    case 'MARKS_SUMMARY':
+                        return this.renderTextElement(element);
+                    case 'TABLE':
+                    case 'TABLE_METADATA':
+                    case 'TABLE_QUESTIONS':
+                        return this.renderTable(element);
+                    case 'ICON':
+                        return this.renderIcon(element);
+                    default:
+                        return this.renderGenericElement(element);
+                }
+            }
+
+            renderLogo(element) {
+                const bbox = element.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                
+                if (element.image_data) {
+                    return '<image x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" href="' + element.image_data + '" preserveAspectRatio="xMidYMid meet"/>';
+                }
+                
+                return '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" class="logo-placeholder" rx="5"/>' +
+                       '<text x="' + (x + width/2) + '" y="' + (y + height/2) + '" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#6c757d">LOGO</text>';
+            }
+
+            renderIcon(element) {
+                const bbox = element.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                const centerX = x + width/2;
+                const centerY = y + height/2;
+                
+                if (element.image_data) {
+                    return '<image x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" href="' + element.image_data + '" preserveAspectRatio="xMidYMid meet"/>';
+                }
+                
+                if (element.type === 'no_mobile_phone') {
+                    const phoneWidth = width * 0.6;
+                    const phoneHeight = height * 0.8;
+                    const phoneX = centerX - phoneWidth/2;
+                    const phoneY = centerY - phoneHeight/2;
+                    
+                    return '<g>' +
+                           '<rect x="' + phoneX + '" y="' + phoneY + '" width="' + phoneWidth + '" height="' + phoneHeight + '" rx="3" fill="none" stroke="#dc3545" stroke-width="2"/>' +
+                           '<line x1="' + (phoneX + phoneWidth*0.3) + '" y1="' + (phoneY + phoneHeight*0.2) + '" x2="' + (phoneX + phoneWidth*0.7) + '" y2="' + (phoneY + phoneHeight*0.2) + '" stroke="#dc3545" stroke-width="1"/>' +
+                           '<line x1="' + x + '" y1="' + y + '" x2="' + x2 + '" y2="' + y2 + '" stroke="#dc3545" stroke-width="3"/>' +
+                           '</g>';
+                }
+                
+                return '<circle cx="' + centerX + '" cy="' + centerY + '" r="' + (Math.min(width, height)/3) + '" class="icon-placeholder"/>';
+            }
+
+            renderTextElement(element) {
+                let svg = '';
+                
+                if (element.text_blocks) {
+                    element.text_blocks.forEach(block => {
+                        if (block.label === 'ICON') {
+                            svg += this.renderIcon(block);
+                        } else {
+                            svg += this.renderSmartTextBlock(block);
+                        }
+                    });
+                } else if (element.text) {
+                    svg += this.renderSmartTextBlock(element);
+                }
+                
+                return svg;
+            }
+
+            renderSmartTextBlock(block) {
+                if (!block.text || !block.bbox) return '';
+                
+                const bbox = block.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                
+                // Get smart configuration based on content type and element properties
+                const contentType = block.content_type || 'table_data_left';
+                const smartConfig = this.getSmartTextConfig(contentType, bbox, block);
+                
+                let fontSize = smartConfig.fontSize;
+                const padding = this.config.cellPadding;
+                
+                // Handle multi-line text - check for line_breaks property or use smart wrapping
+                let lines = [];
+                if (block.line_breaks && Array.isArray(block.line_breaks)) {
+                    lines = block.line_breaks;
+                } else {
+                    // Smart text wrapping
+                    const words = block.text.split(' ');
+                    let currentLine = '';
+                    
+                    // Estimate character width
+                    const charWidth = fontSize * 0.6;
+                    const maxCharsPerLine = Math.floor((width - padding * 2) / charWidth);
+                    
+                    // Auto-wrap text
+                    words.forEach(word => {
+                        if ((currentLine + ' ' + word).length <= maxCharsPerLine || currentLine === '') {
+                            currentLine = currentLine === '' ? word : currentLine + ' ' + word;
+                        } else {
+                            if (currentLine !== '') lines.push(currentLine);
+                            currentLine = word;
+                        }
+                    });
+                    if (currentLine !== '') lines.push(currentLine);
+                }
+                
+                // Adjust font size if too many lines (but preserve header sizing)
+                const isHeader = contentType.includes('name') || contentType.includes('title') || contentType.includes('header');
+                if (!isHeader) {
+                    const lineHeight = fontSize * smartConfig.lineHeight;
+                    const totalHeight = lines.length * lineHeight;
+                    const availableHeight = height - padding * 2;
+                    
+                    if (totalHeight > availableHeight && availableHeight > 0) {
+                        fontSize = Math.min(fontSize, (availableHeight / lines.length) * 0.8);
+                    }
+                }
+                
+                // Minimum font size
+                fontSize = Math.max(fontSize, 6);
+                
+                // Text positioning based on alignment
+                let textAnchor = 'start';
+                let textX = x + padding;
+                
+                if (smartConfig.textAlign === 'center') {
+                    textAnchor = 'middle';
+                    textX = x + width/2;
+                } else if (smartConfig.textAlign === 'right') {
+                    textAnchor = 'end';
+                    textX = x2 - padding;
+                }
+                
+                const adjustedLineHeight = fontSize * smartConfig.lineHeight;
+                const adjustedTotalHeight = lines.length * adjustedLineHeight;
+                const startY = y + Math.max(fontSize, (height - adjustedTotalHeight) / 2 + fontSize * 0.8);
+                
+                let svg = '';
+                let classes = [];
+                
+                // Apply styling classes
+                if (smartConfig.fontWeight === 'bold') classes.push('text-bold');
+                if (smartConfig.textDecoration === 'underline') classes.push('text-underline');
+                
+                lines.forEach((line, index) => {
+                    const lineY = startY + (index * adjustedLineHeight);
+                    svg += '<text x="' + textX + '" y="' + lineY + '" font-family="' + smartConfig.fontFamily + '" font-size="' + fontSize + '" font-weight="' + smartConfig.fontWeight + '" class="' + classes.join(' ') + '" text-anchor="' + textAnchor + '" fill="#000">' + this.escapeXML(line.trim()) + '</text>';
+                });
+                
+                return svg;
+            }
+
+            renderTable(element) {
+                let svg = '';
+                const bbox = element.bbox;
+                const tableX = bbox[0], tableY = bbox[1], tableX2 = bbox[2], tableY2 = bbox[3];
+                
+                // Draw table border
+                svg += '<rect x="' + tableX + '" y="' + tableY + '" width="' + (tableX2 - tableX) + '" height="' + (tableY2 - tableY) + '" class="table-border"/>';
+                
+                // Process header
+                if (element.header && element.header.length > 0) {
+                    element.header.forEach(row => {
+                        svg += this.renderTableRow(row, true);
+                    });
+                }
+                
+                // Process body
+                if (element.body && element.body.length > 0) {
+                    element.body.forEach(row => {
+                        svg += this.renderTableRow(row, false);
+                    });
+                }
+                
+                // Handle key-value table type
+                if (element.type === 'key_value' && element.rows) {
+                    element.rows.forEach(row => {
+                        svg += this.renderTableRow(row, false);
+                    });
+                }
+                
+                return svg;
+            }
+
+            renderTableRow(row, isHeader) {
+                let svg = '';
+                
+                if (row.cells) {
+                    row.cells.forEach(cell => {
+                        svg += this.renderTableCell(cell, isHeader);
+                    });
+                }
+                
+                return svg;
+            }
+
+            renderTableCell(cell, isHeader) {
+                if (!cell.bbox) return '';
+                
+                const bbox = cell.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                
+                let svg = '';
+                
+                // Draw cell background and border
+                const cellClass = isHeader ? 'table-header' : 'table-cell';
+                svg += '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" class="' + cellClass + '"/>';
+                
+                // Handle cell content
+                if (cell.text_blocks) {
+                    cell.text_blocks.forEach(block => {
+                        if (block.label === 'FIGURE') {
+                            svg += this.renderFigure(block);
+                        } else if (block.label === 'FIGURE_CAPTION') {
+                            svg += this.renderSmartTextBlock(Object.assign({}, block, { content_type: 'figure_caption' }));
+                        } else {
+                            svg += this.renderSmartTextBlock(block);
+                        }
+                    });
+                } else if (cell.text) {
+                    // Smart content type detection for table cells
+                    let contentType = cell.content_type;
+                    if (!contentType) {
+                        if (isHeader) {
+                            contentType = 'table_header_center';
+                        } else {
+                            // Auto-detect based on content and position
+                            if (width < 100 && (cell.text.length <= 5 || /^[A-Z0-9]+$/.test(cell.text))) {
+                                contentType = 'table_data_center';
+                            } else {
+                                contentType = 'table_data_left';
+                            }
+                        }
+                    }
+                    
+                    // Create enhanced cell object with all properties
+                    const smartCell = {
+                        text: cell.text,
+                        bbox: cell.bbox,
+                        content_type: contentType,
+                        text_weight: cell.text_weight,
+                        text_align: cell.text_align,
+                        emphasis: cell.emphasis,
+                        hierarchy_level: cell.hierarchy_level,
+                        line_breaks: cell.line_breaks
+                    };
+                    svg += this.renderSmartTextBlock(smartCell);
+                }
+                
+                return svg;
+            }
+
+            renderFigure(figure) {
+                if (!figure.bbox || !figure.text) return '';
+                
+                const bbox = figure.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                
+                // Draw figure background
+                let svg = '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" class="figure-bg"/>';
+                
+                // Handle matrix data if available
+                if (figure.matrix_data && figure.type === 'matrix_4x4') {
+                    return svg + this.renderMatrix(figure);
+                }
+                
+                // Render figure content with smart sizing
+                const lines = figure.text.split('\n').filter(line => line.trim());
+                const contentType = figure.content_type || 'figure_matrix';
+                const smartConfig = this.getSmartTextConfig(contentType, bbox, figure);
+                let fontSize = smartConfig.fontSize;
+                
+                // Auto-adjust for figure content
+                const maxLineLength = Math.max(...lines.map(line => line.length));
+                const availableWidth = width - 20; // padding
+                const charWidth = fontSize * 0.6;
+                
+                if (maxLineLength * charWidth > availableWidth) {
+                    fontSize = Math.min(fontSize, (availableWidth / maxLineLength) * 0.8);
+                }
+                
+                fontSize = Math.max(fontSize, 6);
+                
+                const lineHeight = fontSize * smartConfig.lineHeight;
+                const totalHeight = lines.length * lineHeight;
+                const startY = y + Math.max(10, (height - totalHeight) / 2) + fontSize;
+                
+                lines.forEach((line, index) => {
+                    const lineY = startY + (index * lineHeight);
+                    svg += '<text x="' + (x + width/2) + '" y="' + lineY + '" text-anchor="middle" font-family="' + smartConfig.fontFamily + '" font-size="' + fontSize + '" fill="#000">' + this.escapeXML(line.trim()) + '</text>';
+                });
+                
+                return svg;
+            }
+
+            renderMatrix(figure) {
+                const bbox = figure.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                const matrix = figure.matrix_data;
+                
+                if (!matrix || !Array.isArray(matrix)) return '';
+                
+                const rows = matrix.length;
+                const cols = matrix[0] ? matrix[0].length : 0;
+                
+                // Calculate cell dimensions
+                const cellWidth = (width - 40) / cols; // 20px padding on each side
+                const cellHeight = (height - 40) / rows; // 20px padding top and bottom
+                const startX = x + 20;
+                const startY = y + 20;
+                
+                let svg = '';
+                
+                // Get smart configuration for matrix text
+                const smartConfig = this.getSmartTextConfig('figure_matrix', bbox, figure);
+                const fontSize = Math.min(smartConfig.fontSize, cellWidth * 0.4, cellHeight * 0.4);
+                
+                // Render matrix cells
+                matrix.forEach((row, rowIndex) => {
+                    row.forEach((value, colIndex) => {
+                        const cellX = startX + (colIndex * cellWidth);
+                        const cellY = startY + (rowIndex * cellHeight);
+                        const textX = cellX + cellWidth / 2;
+                        const textY = cellY + cellHeight / 2 + fontSize * 0.3;
+                        
+                        // Optional: draw cell border for matrix
+                        svg += '<rect x="' + cellX + '" y="' + cellY + '" width="' + cellWidth + '" height="' + cellHeight + '" fill="none" stroke="#ddd" stroke-width="0.5"/>';
+                        
+                        svg += '<text x="' + textX + '" y="' + textY + '" text-anchor="middle" dominant-baseline="middle" font-family="' + smartConfig.fontFamily + '" font-size="' + fontSize + '" fill="#000">' + value + '</text>';
+                    });
+                });
+                
+                return svg;
+            }
+
+            renderGenericElement(element) {
+                if (!element.bbox) return '';
+                
+                const bbox = element.bbox;
+                const x = bbox[0], y = bbox[1], x2 = bbox[2], y2 = bbox[3];
+                const width = x2 - x;
+                const height = y2 - y;
+                
+                return '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" fill="rgba(0,0,255,0.1)" stroke="blue" stroke-width="1" stroke-dasharray="2,2"/>' +
+                       '<text x="' + (x + 2) + '" y="' + (y + 12) + '" font-size="10" fill="blue">' + (element.label || 'UNKNOWN') + '</text>';
+            }
+
+            escapeXML(text) {
+                return text.replace(/&/g, '&amp;')
+                          .replace(/</g, '&lt;')
+                          .replace(/>/g, '&gt;')
+                          .replace(/"/g, '&quot;')
+                          .replace(/'/g, '&#39;');
+            }
+        }
+
+        // Image conversion utility
+        function convertImageToBase64(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                callback(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function addImageToJSON() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    convertImageToBase64(file, function(base64) {
+                        const elementType = prompt('What type of element is this? (logo/icon/figure)', 'logo');
+                        const bbox = prompt('Enter bbox coordinates [x1,y1,x2,y2]:', '[52,55,150,120]');
+                        
+                        try {
+                            const bboxArray = JSON.parse(bbox);
+                            const imageElement = {
+                                "label": elementType.toUpperCase(),
+                                "bbox": bboxArray,
+                                "type": elementType === 'icon' ? 'no_mobile_phone' : elementType,
+                                "image_data": base64,
+                                "image_type": file.type.split('/')[1]
+                            };
+                            
+                            const currentJSON = document.getElementById('jsonInput').value;
+                            if (currentJSON) {
+                                const elements = JSON.parse(currentJSON);
+                                elements.push(imageElement);
+                                document.getElementById('jsonInput').value = JSON.stringify(elements, null, 2);
+                            } else {
+                                document.getElementById('jsonInput').value = JSON.stringify([imageElement], null, 2);
+                            }
+                            
+                            hideFileInfo(); // Clear file info when manually adding elements
+                            showMessage('🖼️ Image added to JSON successfully!');
+                        } catch (error) {
+                            showMessage('Error adding image: ' + error.message, 'error');
+                        }
+                    });
+                }
+            };
+            input.click();
+        }
+
+        function generateSVG() {
+            const jsonInput = document.getElementById('jsonInput').value.trim();
+            const svgOutput = document.getElementById('svgOutput');
+            
+            if (!jsonInput) {
+                showMessage('Please enter JSON data or upload a JSON file', 'error');
+                return;
+            }
+            
+            try {
+                const generator = new EnhancedSVGGenerator(currentConfig);
+                const svg = generator.generateSVG(jsonInput);
+                svgOutput.innerHTML = svg;
+                currentSVG = svg;
+                showMessage('🎯 Enhanced SVG generated successfully with all new features!');
+            } catch (error) {
+                showMessage(error.message, 'error');
+                console.error(error);
+            }
+        }
+
+        function downloadSVG() {
+            if (!currentSVG) {
+                showMessage('Please generate an SVG first', 'error');
+                return;
+            }
+            
+            const blob = new Blob([currentSVG], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = (currentFileName ? currentFileName.replace(/\.[^/.]+$/, '') + '_' : '') + 'enhanced_question_paper.svg';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showMessage('📥 Enhanced SVG downloaded successfully!');
+        }
+
+        // Initialize file upload functionality when page loads
+        window.onload = function() {
+            setupFileUpload();
+            loadSample('sample1');
+        };
+    </script>
+</body>
+</html>
