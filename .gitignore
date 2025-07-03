@@ -1,0 +1,40 @@
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pyenv
+.python-version
+
+
+# VS Code settings
+.vscode/
+
+# Editor backups
+*.swp
+*.swo
+*.bak
+
+# Logs
+*.log
+
+# Mac OS
+.DS_Store

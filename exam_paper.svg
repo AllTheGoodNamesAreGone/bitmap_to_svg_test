@@ -1,0 +1,146 @@
+<svg width="800" height="1130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- Header Section -->
+  <!-- Placeholder for RAMAIAH Logo -->
+  <image xlink:href="logo.png" x="40" y="30" width="70" height="70" />
+  <text x="130" y="55" font-family="sans-serif" font-size="18" font-weight="bold">RAMAIAH</text>
+  <text x="130" y="75" font-family="sans-serif" font-size="14">Institute of Technology</text>
+
+  <line x1="290" y1="30" x2="290" y2="100" stroke="black" stroke-width="1"/>
+
+  <text x="310" y="45" font-family="sans-serif" font-size="14" font-weight="bold">Dept. of Computer Science and Engineering (AI &amp; ML)</text>
+  <text x="310" y="65" font-family="sans-serif" font-size="14" font-weight="bold">&amp; Computer Science and Engineering (Cyber Security)</text>
+
+  <!-- Title Block -->
+  <text x="100" y="140" font-family="sans-serif" font-size="16" font-weight="bold">Programme: B E – Computer Science and Engineering (AI &amp; ML) &amp;</text>
+  <text x="200" y="160" font-family="sans-serif" font-size="16" font-weight="bold">Computer Science and Engineering (Cyber Security)</text>
+  <text x="290" y="190" font-family="sans-serif" font-size="18" font-weight="bold">Internal Assessment – I</text>
+
+  <!-- Metadata Table -->
+  <rect x="40" y="220" width="720" height="75" fill="none" stroke="black" stroke-width="1"/>
+  <line x1="40" y1="245" x2="760" y2="245" stroke="black" stroke-width="1"/> <!-- Horizontal line 1 -->
+  <line x1="40" y1="270" x2="760" y2="270" stroke="black" stroke-width="1"/> <!-- Horizontal line 2 -->
+  <line x1="380" y1="220" x2="380" y2="295" stroke="black" stroke-width="1"/> <!-- Vertical middle line -->
+  <line x1="180" y1="220" x2="180" y2="295" stroke="black" stroke-width="1"/> <!-- Vertical line after labels -->
+  <line x1="580" y1="220" x2="580" y2="295" stroke="black" stroke-width="1"/> <!-- Vertical line after labels -->
+
+
+  <text x="50" y="238" font-family="sans-serif" font-size="12" font-weight="bold">TERM:</text>
+  <text x="190" y="238" font-family="sans-serif" font-size="12">3rd March 2025 to 21st June 2025</text>
+  <text x="390" y="238" font-family="sans-serif" font-size="12" font-weight="bold">COURSE NAME:</text>
+  <text x="590" y="238" font-family="sans-serif" font-size="12">Introduction to Deep Learning</text>
+
+  <text x="50" y="263" font-family="sans-serif" font-size="12" font-weight="bold">DATE:</text>
+  <text x="190" y="263" font-family="sans-serif" font-size="12">24-04-2025 11:00AM to 12:00AM</text>
+  <text x="390" y="263" font-family="sans-serif" font-size="12" font-weight="bold">COURSE CODE:</text>
+  <text x="590" y="263" font-family="sans-serif" font-size="12">CI62</text>
+
+  <text x="50" y="288" font-family="sans-serif" font-size="12" font-weight="bold">MAX MARKS:</text>
+  <text x="190" y="288" font-family="sans-serif" font-size="12">30</text>
+  <text x="390" y="288" font-family="sans-serif" font-size="12" font-weight="bold">PORTIONS:</text>
+  <text x="590" y="288" font-family="sans-serif" font-size="12">L1-L26</text>
+
+  <!-- Mobile Phone Icon and Ban Text -->
+  <!-- Placeholder for Mobile Ban Icon -->
+  <image xlink:href="phone_icon.png" x="50" y="310" width="25" height="25" />
+  <text x="85" y="328" font-family="sans-serif" font-size="12">Mobile Phones are banned</text>
+
+  <!-- Instructions -->
+  <text x="50" y="360" font-family="sans-serif" font-size="12" font-weight="bold">Instructions to Candidates: Answer any two full questions.</text>
+  <text x="630" y="360" font-family="sans-serif" font-size="12">Marks: 15x2=30</text>
+
+  <!-- Main Questions Table -->
+  <!-- Outer Box -->
+  <rect x="40" y="380" width="720" height="580" fill="none" stroke="black" stroke-width="1"/>
+  <!-- Header Row Lines -->
+  <line x1="40" y1="420" x2="760" y2="420" stroke="black" stroke-width="1"/>
+  <!-- Vertical Column Lines -->
+  <line x1="80"  y1="380" x2="80"  y2="960" stroke="black" stroke-width="1"/> <!-- After Q.No -->
+  <line x1="500" y1="380" x2="500" y2="960" stroke="black" stroke-width="1"/> <!-- After Questions -->
+  <line x1="590" y1="380" x2="590" y2="960" stroke="black" stroke-width="1"/> <!-- After Blooms -->
+  <line x1="660" y1="380" x2="660" y2="960" stroke="black" stroke-width="1"/> <!-- After CO -->
+
+  <!-- Table Headers -->
+  <text x="45" y="405" font-family="sans-serif" font-size="12" font-weight="bold">Q.No</text>
+  <text x="250" y="405" font-family="sans-serif" font-size="12" font-weight="bold">Questions</text>
+  <text x="505" y="398" font-family="sans-serif" font-size="11" font-weight="bold">Blooms</text>
+  <text x="505" y="412" font-family="sans-serif" font-size="11" font-weight="bold">Levels</text>
+  <text x="595" y="405" font-family="sans-serif" font-size="12" font-weight="bold">CO</text>
+  <text x="675" y="405" font-family="sans-serif" font-size="12" font-weight="bold">Marks</text>
+  <text x="508" y="428" font-family="sans-serif" font-size="9" >(L1 to</text> <!-- Adjusting for the L6 under -->
+  <text x="508" y="438" font-family="sans-serif" font-size="9" >L6)*</text>
+
+
+  <!-- Question 1.a -->
+  <line x1="40" y1="470" x2="760" y2="470" stroke="black" stroke-width="0.5"/>
+  <text x="50" y="445" font-family="sans-serif" font-size="12">1.a</text>
+  <text x="90" y="435" font-family="sans-serif" font-size="12">Discuss how the Perceptron functions as the basic structural element in building neural</text>
+  <text x="90" y="450" font-family="sans-serif" font-size="12">networks with a neat diagram.</text>
+  <text x="530" y="455" font-family="sans-serif" font-size="12">L2</text>
+  <text x="610" y="455" font-family="sans-serif" font-size="12">CO1</text>
+  <text x="700" y="455" font-family="sans-serif" font-size="12">4</text>
+
+  <!-- Question 1.b -->
+  <line x1="40" y1="530" x2="760" y2="530" stroke="black" stroke-width="0.5"/>
+  <text x="50" y="495" font-family="sans-serif" font-size="12">b</text>
+  <text x="90" y="480" font-family="sans-serif" font-size="12">Describe Categorical Cross Entropy (CCE) and Binary Cross-Entropy (BCE). For the</text>
+  <text x="90" y="495" font-family="sans-serif" font-size="12">given output of Softmax activation [0.7,0.1,0.2] and tragets [1,0,0], Calculate the CCE</text>
+  <text x="90" y="510" font-family="sans-serif" font-size="12">Loss.</text>
+  <text x="530" y="505" font-family="sans-serif" font-size="12">L3</text>
+  <text x="610" y="505" font-family="sans-serif" font-size="12">CO2</text>
+  <text x="695" y="505" font-family="sans-serif" font-size="12">2*3</text>
+
+  <!-- Question 1.c -->
+  <line x1="40" y1="570" x2="760" y2="570" stroke="black" stroke-width="0.5"/>
+  <text x="50" y="550" font-family="sans-serif" font-size="12">c</text>
+  <text x="90" y="540" font-family="sans-serif" font-size="12">Explain the steps involved in how a Convolutional Neural Network (CNN) classifies</text>
+  <text x="90" y="555" font-family="sans-serif" font-size="12">image data.</text>
+  <text x="530" y="550" font-family="sans-serif" font-size="12">L2</text>
+  <text x="610" y="550" font-family="sans-serif" font-size="12">CO3</text>
+  <text x="700" y="550" font-family="sans-serif" font-size="12">5</text>
+
+  <!-- Question 2.a -->
+  <line x1="40" y1="600" x2="760" y2="600" stroke="black" stroke-width="0.5"/>
+  <text x="50" y="588" font-family="sans-serif" font-size="12">2.a</text>
+  <text x="90" y="588" font-family="sans-serif" font-size="12">Differentiate Biological Neuron and Artificial Neuron.</text>
+  <text x="530" y="588" font-family="sans-serif" font-size="12">L2</text>
+  <text x="610" y="588" font-family="sans-serif" font-size="12">CO1</text>
+  <text x="700" y="588" font-family="sans-serif" font-size="12">5</text>
+
+  <!-- Question 2.b -->
+  <line x1="40" y1="630" x2="760" y2="630" stroke="black" stroke-width="0.5"/>
+  <text x="50" y="618" font-family="sans-serif" font-size="12">b</text>
+  <text x="90" y="618" font-family="sans-serif" font-size="12">Derive the update rule for Gradient Descent used to minimize a given loss function.</text>
+  <text x="530" y="618" font-family="sans-serif" font-size="12">L3</text>
+  <text x="610" y="618" font-family="sans-serif" font-size="12">CO2</text>
+  <text x="700" y="618" font-family="sans-serif" font-size="12">6</text>
+
+  <!-- Question 2.c with Fig.2c data -->
+  <line x1="40" y1="800" x2="760" y2="800" stroke="black" stroke-width="0.5"/> <!-- Line after Fig.2c content -->
+  <text x="50" y="655" font-family="sans-serif" font-size="12">c</text>
+  <text x="90" y="645" font-family="sans-serif" font-size="12">What is Pooling Operation in CNN? Perform max pooling and average pooling for</text>
+  <text x="90" y="660" font-family="sans-serif" font-size="12">the given feature map in Fig.2c. by considering a 2x2 Window with stride = 2</text>
+
+  <text x="300" y="700" font-family="monospace" font-size="12">1   3   2   4</text>
+  <text x="300" y="715" font-family="monospace" font-size="12">5   6   7   8</text>
+  <text x="300" y="730" font-family="monospace" font-size="12">9  10  11  12</text>
+  <text x="300" y="745" font-family="monospace" font-size="12">13 14  15  16</text>
+  <text x="360" y="770" font-family="sans-serif" font-size="12">Fig.2c</text>
+
+  <text x="530" y="730" font-family="sans-serif" font-size="12">L3</text>
+  <text x="610" y="730" font-family="sans-serif" font-size="12">CO3</text>
+  <text x="700" y="730" font-family="sans-serif" font-size="12">4</text>
+
+  <!-- Question 3.a -->
+  <!-- <line x1="40" y1="870" x2="760" y2="870" stroke="black" stroke-width="0.5"/> --> <!-- Bottom line of table is outer rect -->
+  <text x="50" y="830" font-family="sans-serif" font-size="12">3.a</text>
+  <text x="90" y="820" font-family="sans-serif" font-size="12">Explain the Softmax and ReLU activation functions with graph representations.</text>
+  <text x="90" y="835" font-family="sans-serif" font-size="12">Illustrate the concept of dead neurons in a neural network.</text>
+  <text x="530" y="845" font-family="sans-serif" font-size="12">L2</text>
+  <text x="610" y="845" font-family="sans-serif" font-size="12">CO1</text>
+  <text x="700" y="845" font-family="sans-serif" font-size="12">5</text>
+
+</svg>

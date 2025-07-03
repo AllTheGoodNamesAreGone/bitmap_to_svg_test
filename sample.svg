@@ -1,0 +1,155 @@
+<svg width="800" height="1131" viewBox="0 0 800 1131" xmlns="http://www.w3.org/2000/svg" font-family="monospace, 'Courier New'">
+
+  <!-- Clean white background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Header -->
+  <g transform="translate(40, 40)">
+    <!-- Text Only, Logo Removed -->
+    <text x="60" y="15" font-size="18" font-weight="bold">RAMAIAH</text>
+    <text x="60" y="35" font-size="14">Institute of Technology</text>
+
+    <!-- Department Info -->
+    <g transform="translate(290, 0)" font-size="15" text-anchor="start">
+      <text x="0" y="15" font-weight="bold">Dept. of Computer Science and Engineering (AI &amp; ML)</text>
+      <text x="0" y="35" font-weight="bold">&amp; Computer Science and Engineering (Cyber Security)</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g text-anchor="middle" font-size="16" font-weight="bold" transform="translate(400, 140)">
+    <text x="0" y="0">Programme: B E - Computer Science and Engineering (AI&amp;ML) &amp;</text>
+    <text x="0" y="22">Computer Science and Engineering (Cyber Security)</text>
+    <text x="0" y="55" font-size="18" style="text-decoration: underline;">Internal Assessment - I</text>
+  </g>
+
+  <!-- Course Info Table -->
+  <g transform="translate(60, 210)" stroke="black" fill="none">
+    <rect x="0" y="0" width="680" height="90" stroke-width="2"/>
+    <line x1="0" y1="30" x2="680" y2="30" stroke-width="2"/>
+    <line x1="0" y1="60" x2="680" y2="60" stroke-width="2"/>
+    <line x1="340" y1="0" x2="340" y2="90" stroke-width="2"/>
+    <g font-size="14" stroke="none" fill="black">
+      <text x="10" y="20">TERM: 3rd March 2025 to 21st June 2025</text>
+      <text x="10" y="50">DATE: 24-04-2025  11:00AM to 12:00AM</text>
+      <text x="10" y="80">MAX MARKS: 30</text>
+      
+      <text x="350" y="20">COURSE NAME: Introduction to Deep Learning</text>
+      <text x="350" y="50">COURSE CODE: C162</text>
+      <text x="350" y="80">PORTIONS: L1-L26</text>
+    </g>
+  </g>
+  
+  <!-- Instructions -->
+  <g transform="translate(60, 315)" font-size="14">
+    <!-- Mobile phone banned icon -->
+    <g stroke="black" stroke-width="2" fill="none">
+        <circle cx="20" cy="10" r="12"/>
+        <rect x="15" y="3" width="10" height="15" rx="2" ry="2" fill="black" stroke="none"/>
+        <line x1="10" y1="20" x2="30" y2="0"/>
+    </g>
+    <text x="45" y="15">Mobile Phones are banned</text>
+    
+    <text x="0" y="45" font-weight="bold">Instructions to Candidates: Answer any two full questions.</text>
+    
+    <text x="580" y="45" font-weight="bold">Marks: 15x2=30</text>
+  </g>
+
+  <!-- Questions Table -->
+  <g transform="translate(40, 380)">
+    <!-- Table Grid -->
+    <g stroke="black" fill="none">
+        <rect x="0" y="0" width="720" height="550" stroke-width="1.5"/>
+        <line x1="0" y1="40" x2="720" y2="40" stroke-width="1.5"/>
+        <!-- Vertical Lines -->
+        <line x1="60" y1="0" x2="60" y2="550" stroke-width="1.5"/>
+        <line x1="550" y1="0" x2="550" y2="550" stroke-width="1.5"/>
+        <line x1="610" y1="0" x2="610" y2="550" stroke-width="1.5"/>
+        <!-- Horizontal Lines for questions -->
+        <line x1="0" y1="120" x2="720" y2="120" stroke-width="1.5"/>
+        <line x1="0" y1="170" x2="720" y2="170" stroke-width="1"/>
+        <line x1="0" y1="220" x2="720" y2="220" stroke-width="1.5"/>
+        <line x1="0" y1="270" x2="720" y2="270" stroke-width="1"/>
+        <line x1="0" y1="450" x2="720" y2="450" stroke-width="1.5"/>
+    </g>
+
+    <!-- Table Headers -->
+    <g font-size="14" font-weight="bold" text-anchor="middle">
+      <text x="30" y="25">Q.No</text>
+      <text x="305" y="25">Questions</text>
+      <text x="580" y="15">Blooms</text>
+      <text x="580" y="30">Levels</text>
+      <text x="640" y="15">CO</text>
+      <text x="685" y="25">Marks</text>
+    </g>
+    <text x="560" y="30" font-size="10">(L1 to L6)</text>
+    
+    <!-- Question 1 -->
+    <g font-size="14">
+      <text x="10" y="60">1.a</text>
+      <text x="70" y="60">Discuss how the Perceptron functions as the basic structural element in building neural</text>
+      <text x="70" y="78">networks with a neat diagram.</text>
+      <text x="575" y="70">L2</text>
+      <text x="630" y="70">co1</text>
+      <text x="685" y="70">4</text>
+
+      <text x="15" y="140" font-weight="bold">b</text>
+      <text x="70" y="130">Describe Categorical Cross Entropy (CCE) and Binary Cross-Entropy (BCE). For the</text>
+      <text x="70" y="148">given output of Softmax activation [0.7,0.1,0.2] and tragets [1,0,0], Calculate the CCE</text>
+      <text x="70" y="166">Loss.</text>
+      <text x="575" y="145">L3</text>
+      <text x="630" y="145">co2</text>
+      <text x="680" y="145">2*3</text>
+
+      <text x="15" y="190" font-weight="bold">c</text>
+      <text x="70" y="185">Explain the steps involved in how a Convolutional Neural Network (CNN) classifies</text>
+      <text x="70" y="203">image data.</text>
+      <text x="575" y="195">L2</text>
+      <text x="630" y="195">co3</text>
+      <text x="685" y="195">5</text>
+    </g>
+    
+    <!-- Question 2 -->
+    <g font-size="14">
+      <text x="10" y="240">2.a</text>
+      <text x="70" y="240">Differentiate Biological Neuron and Artificial Neuron.</text>
+      <text x="575" y="240">L2</text>
+      <text x="630" y="240">co1</text>
+      <text x="685" y="240">5</text>
+      
+      <text x="15" y="290" font-weight="bold">b</text>
+      <text x="70" y="285">Derive the update rule for Gradient Descent used to minimize a given loss function.</text>
+      <text x="575" y="290">L3</text>
+      <text x="630" y="290">co1</text>
+      <text x="685" y="290">6</text>
+
+      <text x="15" y="330" font-weight="bold">c</text>
+      <text x="70" y="320">What is Pooling Operation in CNN? Perform max pooling and average pooling for</text>
+      <text x="70" y="338">the given feature map in Fig.2c. by considering a 2x2 Window with stride = 2</text>
+      
+      <!-- Feature Map -->
+      <g transform="translate(180, 360)" font-size="14" text-anchor="middle">
+        <text x="0" y="0">1</text> <text x="30" y="0">3</text> <text x="60" y="0">2</text> <text x="90" y="0">4</text>
+        <text x="0" y="20">5</text> <text x="30" y="20">6</text> <text x="60" y="20">7</text> <text x="90" y="20">8</text>
+        <text x="0" y="40">9</text> <text x="30" y="40">10</text> <text x="60" y="40">11</text> <text x="90" y="40">12</text>
+        <text x="0" y="60">13</text> <text x="30" y="60">14</text> <text x="60" y="60">15</text> <text x="90" y="60">16</text>
+      </g>
+      <text x="210" y="435" font-size="14">Fig. 2c</text>
+      
+      <text x="575" y="370">L3</text>
+      <text x="630" y="370">co3</text>
+      <text x="685" y="370">4</text>
+    </g>
+
+    <!-- Question 3 -->
+    <g font-size="14">
+      <text x="10" y="470">3.a</text>
+      <text x="70" y="465">Explain the Softmax and ReLU activation functions with graph representations.</text>
+      <text x="70" y="483">Illustrate the concept of dead neurons in a neural network.</text>
+      <text x="575" y="480">L2</text>
+      <text x="630" y="480">co1</text>
+      <text x="685" y="480">5</text>
+    </g>
+  </g>
+
+</svg>
