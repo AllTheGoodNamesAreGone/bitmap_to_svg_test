@@ -1,0 +1,620 @@
+{
+  "image_info": {
+    "path": "images\\sample2.jpg",
+    "dimensions": [
+      3508,
+      2481,
+      3
+    ],
+    "filename": "sample2.jpg"
+  },
+  "layout_blocks": [
+    {
+      "id": 12,
+      "type": "Title",
+      "confidence": 0.2167142927646637,
+      "coordinates": {
+        "x1": 908,
+        "y1": 242,
+        "x2": 1646,
+        "y2": 303
+      },
+      "dimensions": {
+        "width": 738,
+        "height": 61
+      },
+      "area": 45018,
+      "aspect_ratio": 12.098360655737705,
+      "center": {
+        "x": 1277,
+        "y": 272
+      },
+      "visual_features": {
+        "dominant_color": [
+          207.8126971433649,
+          208.58514372028966,
+          208.85630192367498
+        ],
+        "edge_density": 0.0820338531254165,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 1,
+      "type": "Title",
+      "confidence": 0.9268821477890015,
+      "coordinates": {
+        "x1": 814,
+        "y1": 267,
+        "x2": 1773,
+        "y2": 421
+      },
+      "dimensions": {
+        "width": 959,
+        "height": 154
+      },
+      "area": 147686,
+      "aspect_ratio": 6.2272727272727275,
+      "center": {
+        "x": 1293,
+        "y": 344
+      },
+      "visual_features": {
+        "dominant_color": [
+          212.89368660536545,
+          213.52873664396083,
+          213.8427203661823
+        ],
+        "edge_density": 0.07957423181615048,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 11,
+      "type": "Title",
+      "confidence": 0.2489682286977768,
+      "coordinates": {
+        "x1": 787,
+        "y1": 344,
+        "x2": 1782,
+        "y2": 418
+      },
+      "dimensions": {
+        "width": 995,
+        "height": 74
+      },
+      "area": 73630,
+      "aspect_ratio": 13.445945945945946,
+      "center": {
+        "x": 1284,
+        "y": 381
+      },
+      "visual_features": {
+        "dominant_color": [
+          216.6843542034497,
+          217.21297025668886,
+          217.5022816786636
+        ],
+        "edge_density": 0.06809724297161483,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Title",
+      "confidence": 0.40009605884552,
+      "coordinates": {
+        "x1": 163,
+        "y1": 465,
+        "x2": 792,
+        "y2": 522
+      },
+      "dimensions": {
+        "width": 629,
+        "height": 57
+      },
+      "area": 35853,
+      "aspect_ratio": 11.035087719298245,
+      "center": {
+        "x": 477,
+        "y": 493
+      },
+      "visual_features": {
+        "dominant_color": [
+          211.06490391320114,
+          211.50801885476807,
+          211.97961119013752
+        ],
+        "edge_density": 0.08900231500850696,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 2,
+      "type": "Title",
+      "confidence": 0.7167666554450989,
+      "coordinates": {
+        "x1": 1325,
+        "y1": 481,
+        "x2": 2305,
+        "y2": 544
+      },
+      "dimensions": {
+        "width": 980,
+        "height": 63
+      },
+      "area": 61740,
+      "aspect_ratio": 15.555555555555555,
+      "center": {
+        "x": 1815,
+        "y": 512
+      },
+      "visual_features": {
+        "dominant_color": [
+          210.2351149983803,
+          210.9386459345643,
+          211.20798509880143
+        ],
+        "edge_density": 0.07871720116618076,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Text",
+      "confidence": 0.3128095269203186,
+      "coordinates": {
+        "x1": 1338,
+        "y1": 481,
+        "x2": 2295,
+        "y2": 541
+      },
+      "dimensions": {
+        "width": 957,
+        "height": 60
+      },
+      "area": 57420,
+      "aspect_ratio": 15.95,
+      "center": {
+        "x": 1816,
+        "y": 511
+      },
+      "visual_features": {
+        "dominant_color": [
+          207.0763497039359,
+          207.83009404388716,
+          208.1185997910136
+        ],
+        "edge_density": 0.0841692789968652,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 0,
+      "type": "Figure",
+      "confidence": 0.9731521010398865,
+      "coordinates": {
+        "x1": 242,
+        "y1": 521,
+        "x2": 2281,
+        "y2": 2504
+      },
+      "dimensions": {
+        "width": 2039,
+        "height": 1983
+      },
+      "area": 4043337,
+      "aspect_ratio": 1.0282400403429148,
+      "center": {
+        "x": 1261,
+        "y": 1512
+      },
+      "visual_features": {
+        "dominant_color": [
+          235.42166334391618,
+          235.69831775090722,
+          235.68370308979934
+        ],
+        "edge_density": 0.05557068332419484,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Title",
+      "confidence": 0.5882814526557922,
+      "coordinates": {
+        "x1": 673,
+        "y1": 551,
+        "x2": 1021,
+        "y2": 604
+      },
+      "dimensions": {
+        "width": 348,
+        "height": 53
+      },
+      "area": 18444,
+      "aspect_ratio": 6.566037735849057,
+      "center": {
+        "x": 847,
+        "y": 577
+      },
+      "visual_features": {
+        "dominant_color": [
+          208.80649533723704,
+          209.74929516373888,
+          210.0288982867057
+        ],
+        "edge_density": 0.11391238343092605,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Title",
+      "confidence": 0.30835968255996704,
+      "coordinates": {
+        "x1": 165,
+        "y1": 557,
+        "x2": 401,
+        "y2": 607
+      },
+      "dimensions": {
+        "width": 236,
+        "height": 50
+      },
+      "area": 11800,
+      "aspect_ratio": 4.72,
+      "center": {
+        "x": 283,
+        "y": 582
+      },
+      "visual_features": {
+        "dominant_color": [
+          215.22372881355932,
+          216.34762711864406,
+          216.5306779661017
+        ],
+        "edge_density": 0.09203389830508475,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 3,
+      "type": "Title",
+      "confidence": 0.7092936038970947,
+      "coordinates": {
+        "x1": 153,
+        "y1": 728,
+        "x2": 1419,
+        "y2": 784
+      },
+      "dimensions": {
+        "width": 1266,
+        "height": 56
+      },
+      "area": 70896,
+      "aspect_ratio": 22.607142857142858,
+      "center": {
+        "x": 786,
+        "y": 756
+      },
+      "visual_features": {
+        "dominant_color": [
+          211.19785319341005,
+          211.83842529902955,
+          212.15271665538253
+        ],
+        "edge_density": 0.08700067704807041,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 10,
+      "type": "Text",
+      "confidence": 0.2615527808666229,
+      "coordinates": {
+        "x1": 161,
+        "y1": 729,
+        "x2": 1407,
+        "y2": 780
+      },
+      "dimensions": {
+        "width": 1246,
+        "height": 51
+      },
+      "area": 63546,
+      "aspect_ratio": 24.431372549019606,
+      "center": {
+        "x": 784,
+        "y": 754
+      },
+      "visual_features": {
+        "dominant_color": [
+          206.2805998804016,
+          206.98936203694961,
+          207.34900701853775
+        ],
+        "edge_density": 0.09692191483334907,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Text",
+      "confidence": 0.6248626708984375,
+      "coordinates": {
+        "x1": 179,
+        "y1": 811,
+        "x2": 1075,
+        "y2": 868
+      },
+      "dimensions": {
+        "width": 896,
+        "height": 57
+      },
+      "area": 51072,
+      "aspect_ratio": 15.719298245614034,
+      "center": {
+        "x": 627,
+        "y": 839
+      },
+      "visual_features": {
+        "dominant_color": [
+          214.59827302631578,
+          215.21344376566415,
+          215.33409696115288
+        ],
+        "edge_density": 0.08552631578947369,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 13,
+      "type": "Figure",
+      "confidence": 0.20271500945091248,
+      "coordinates": {
+        "x1": 214,
+        "y1": 1824,
+        "x2": 2280,
+        "y2": 2455
+      },
+      "dimensions": {
+        "width": 2066,
+        "height": 631
+      },
+      "area": 1303646,
+      "aspect_ratio": 3.2741679873217118,
+      "center": {
+        "x": 1247,
+        "y": 2139
+      },
+      "visual_features": {
+        "dominant_color": [
+          232.11571162723624,
+          232.43021188267366,
+          232.41023866908654
+        ],
+        "edge_density": 0.07446193215029233,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 4,
+      "type": "Text",
+      "confidence": 0.6315299868583679,
+      "coordinates": {
+        "x1": 123,
+        "y1": 2494,
+        "x2": 818,
+        "y2": 2538
+      },
+      "dimensions": {
+        "width": 695,
+        "height": 44
+      },
+      "area": 30580,
+      "aspect_ratio": 15.795454545454545,
+      "center": {
+        "x": 470,
+        "y": 2516
+      },
+      "visual_features": {
+        "dominant_color": [
+          202.5541530412034,
+          203.15395683453238,
+          203.8868541530412
+        ],
+        "edge_density": 0.12053629823413996,
+        "content_type": "mixed"
+      }
+    }
+  ],
+  "tables": [
+    {
+      "table_id": 0,
+      "confidence": 0.9737606048583984,
+      "coordinates": {
+        "x1": 209,
+        "y1": 934,
+        "x2": 2277,
+        "y2": 2503
+      },
+      "dimensions": {
+        "width": 2068,
+        "height": 1569
+      },
+      "structure": {
+        "estimated_rows": 2709,
+        "estimated_cols": 2554,
+        "has_borders": true
+      },
+      "border_analysis": {
+        "has_outer_border": true,
+        "border_complexity": 295,
+        "estimated_thickness": "medium"
+      }
+    }
+  ],
+  "text_content": {
+    "block_1": {
+      "type": "Title",
+      "text": "ANCE RRR SE NER EE ARROCERULS UE LECHMULUEY\n(Autonomous Institute, Affiliated to VTU)\n-rogramme: Common to all branches of B.E.\n",
+      "coordinates": [
+        814.6806030273438,
+        267.9749755859375,
+        1773.02685546875,
+        421.2785949707031
+      ]
+    },
+    "block_2": {
+      "type": "Title",
+      "text": "Course: Management and Entrepreneu rship\n",
+      "coordinates": [
+        1325.3389892578125,
+        481.9365539550781,
+        2305.5615234375,
+        544.049072265625
+      ]
+    },
+    "block_3": {
+      "type": "Title",
+      "text": "Instructions to Candidates: Answer any two full questions\n",
+      "coordinates": [
+        153.74147033691406,
+        728.9487915039062,
+        1419.70068359375,
+        784.4129028320312
+      ]
+    },
+    "block_4": {
+      "type": "Text",
+      "text": "Mobile phones are not permitted\n",
+      "coordinates": [
+        123.57759094238281,
+        2494.2783203125,
+        818.5870971679688,
+        2538.787841796875
+      ]
+    },
+    "block_5": {
+      "type": "Text",
+      "text": "-ortions for test: Unit I (Full), Unit I(Full)\n",
+      "coordinates": [
+        179.57981872558594,
+        811.94189453125,
+        1075.664306640625,
+        868.1454467773438
+      ]
+    },
+    "block_6": {
+      "type": "Title",
+      "text": "Date:25/04/2025\n",
+      "coordinates": [
+        673.1586303710938,
+        551.0075073242188,
+        1021.281494140625,
+        604.3595581054688
+      ]
+    },
+    "block_7": {
+      "type": "Title",
+      "text": "Term: 03/03/2025 \u201421/06/25\n",
+      "coordinates": [
+        163.1579132080078,
+        465.31646728515625,
+        792.8049926757812,
+        522.1115112304688
+      ]
+    },
+    "block_8": {
+      "type": "Text",
+      "text": "Course: Management and Entrepreneurship\n",
+      "coordinates": [
+        1338.8692626953125,
+        481.81396484375,
+        2295.317626953125,
+        541.268798828125
+      ]
+    },
+    "block_9": {
+      "type": "Title",
+      "text": "CIE: Test |\n",
+      "coordinates": [
+        165.55589294433594,
+        557.1443481445312,
+        401.7924499511719,
+        607.57958984375
+      ]
+    },
+    "block_10": {
+      "type": "Text",
+      "text": "Instructions to Candidates: Answer any two full questions\n",
+      "coordinates": [
+        161.89952087402344,
+        729.5130004882812,
+        1407.974853515625,
+        780.951416015625
+      ]
+    },
+    "block_11": {
+      "type": "Title",
+      "text": "paar\n\nProgramme: Common to all branches of B.E.\n",
+      "coordinates": [
+        787.3859252929688,
+        344.3128967285156,
+        1782.1160888671875,
+        418.9962463378906
+      ]
+    },
+    "block_12": {
+      "type": "Title",
+      "text": "Ramaiah Institute of Technology\n",
+      "coordinates": [
+        908.6386108398438,
+        242.4134521484375,
+        1646.8389892578125,
+        303.3499450683594
+      ]
+    }
+  },
+  "structure_analysis": {
+    "header_detected": false,
+    "question_blocks": [
+      {
+        "block_id": "block_1",
+        "type": "Title",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_2",
+        "type": "Title",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_3",
+        "type": "Title",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_8",
+        "type": "Text",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_10",
+        "type": "Text",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_11",
+        "type": "Title",
+        "contains_questions": true
+      }
+    ],
+    "table_questions": [],
+    "footer_detected": false,
+    "total_questions": 0,
+    "layout_type": "mixed_content"
+  }
+}

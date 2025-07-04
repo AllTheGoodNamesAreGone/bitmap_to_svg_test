@@ -1,0 +1,644 @@
+{
+  "image_info": {
+    "path": "temp_uploads\\sample1.jpg",
+    "dimensions": [
+      1754,
+      1241,
+      3
+    ],
+    "filename": "sample1.jpg"
+  },
+  "layout_blocks": [
+    {
+      "id": 0,
+      "type": "Title",
+      "confidence": 0.9669930934906006,
+      "coordinates": {
+        "x1": 295,
+        "y1": 51,
+        "x2": 1217,
+        "y2": 125
+      },
+      "dimensions": {
+        "width": 922,
+        "height": 74
+      },
+      "area": 68228,
+      "aspect_ratio": 12.45945945945946,
+      "center": {
+        "x": 756,
+        "y": 88
+      },
+      "visual_features": {
+        "dominant_color": [
+          198.93212464090988,
+          199.0958550741631,
+          199.18832444157823
+        ],
+        "edge_density": 0.12047839596646538,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 4,
+      "type": "Title",
+      "confidence": 0.8693065047264099,
+      "coordinates": {
+        "x1": 138,
+        "y1": 211,
+        "x2": 1170,
+        "y2": 333
+      },
+      "dimensions": {
+        "width": 1032,
+        "height": 122
+      },
+      "area": 125904,
+      "aspect_ratio": 8.459016393442623,
+      "center": {
+        "x": 654,
+        "y": 272
+      },
+      "visual_features": {
+        "dominant_color": [
+          221.45533898843564,
+          221.6326804549498,
+          221.6309886897954
+        ],
+        "edge_density": 0.08263438810522303,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 14,
+      "type": "Text",
+      "confidence": 0.2205308973789215,
+      "coordinates": {
+        "x1": 430,
+        "y1": 306,
+        "x2": 785,
+        "y2": 334
+      },
+      "dimensions": {
+        "width": 355,
+        "height": 28
+      },
+      "area": 9940,
+      "aspect_ratio": 12.678571428571429,
+      "center": {
+        "x": 607,
+        "y": 320
+      },
+      "visual_features": {
+        "dominant_color": [
+          192.13470824949698,
+          192.48621730382294,
+          192.6102615694165
+        ],
+        "edge_density": 0.15774647887323945,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Figure",
+      "confidence": 0.361233651638031,
+      "coordinates": {
+        "x1": 64,
+        "y1": 375,
+        "x2": 1211,
+        "y2": 971
+      },
+      "dimensions": {
+        "width": 1147,
+        "height": 596
+      },
+      "area": 683612,
+      "aspect_ratio": 1.924496644295302,
+      "center": {
+        "x": 637,
+        "y": 673
+      },
+      "visual_features": {
+        "dominant_color": [
+          235.30324219001423,
+          235.41801197170324,
+          235.42167486820009
+        ],
+        "edge_density": 0.0826141144391848,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 10,
+      "type": "Figure",
+      "confidence": 0.3400573432445526,
+      "coordinates": {
+        "x1": 62,
+        "y1": 387,
+        "x2": 1227,
+        "y2": 547
+      },
+      "dimensions": {
+        "width": 1165,
+        "height": 160
+      },
+      "area": 186400,
+      "aspect_ratio": 7.28125,
+      "center": {
+        "x": 644,
+        "y": 467
+      },
+      "visual_features": {
+        "dominant_color": [
+          232.39821888412018,
+          232.6299034334764,
+          232.5990289699571
+        ],
+        "edge_density": 0.09269849785407726,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 1,
+      "type": "Figure",
+      "confidence": 0.9471308588981628,
+      "coordinates": {
+        "x1": 57,
+        "y1": 488,
+        "x2": 1241,
+        "y2": 1629
+      },
+      "dimensions": {
+        "width": 1184,
+        "height": 1141
+      },
+      "area": 1350944,
+      "aspect_ratio": 1.0376862401402278,
+      "center": {
+        "x": 649,
+        "y": 1058
+      },
+      "visual_features": {
+        "dominant_color": [
+          239.2445756448824,
+          239.2998296006348,
+          239.29990880451004
+        ],
+        "edge_density": 0.0658036158419594,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 2,
+      "type": "Text",
+      "confidence": 0.878617525100708,
+      "coordinates": {
+        "x1": 68,
+        "y1": 586,
+        "x2": 684,
+        "y2": 611
+      },
+      "dimensions": {
+        "width": 616,
+        "height": 25
+      },
+      "area": 15400,
+      "aspect_ratio": 24.64,
+      "center": {
+        "x": 376,
+        "y": 598
+      },
+      "visual_features": {
+        "dominant_color": [
+          200.5081818181818,
+          200.63071428571428,
+          200.69675324675325
+        ],
+        "edge_density": 0.18714285714285714,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 13,
+      "type": "Table",
+      "confidence": 0.26092326641082764,
+      "coordinates": {
+        "x1": 52,
+        "y1": 679,
+        "x2": 1222,
+        "y2": 1448
+      },
+      "dimensions": {
+        "width": 1170,
+        "height": 769
+      },
+      "area": 899730,
+      "aspect_ratio": 1.5214564369310792,
+      "center": {
+        "x": 637,
+        "y": 1063
+      },
+      "visual_features": {
+        "dominant_color": [
+          238.37299189756928,
+          238.41875340379892,
+          238.41957920709547
+        ],
+        "edge_density": 0.07002767496915742,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 12,
+      "type": "Title",
+      "confidence": 0.2613852024078369,
+      "coordinates": {
+        "x1": 94,
+        "y1": 774,
+        "x2": 1040,
+        "y2": 838
+      },
+      "dimensions": {
+        "width": 946,
+        "height": 64
+      },
+      "area": 60544,
+      "aspect_ratio": 14.78125,
+      "center": {
+        "x": 567,
+        "y": 806
+      },
+      "visual_features": {
+        "dominant_color": [
+          227.26258588794926,
+          227.30929571881606,
+          227.39050938160676
+        ],
+        "edge_density": 0.11256276427061311,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Title",
+      "confidence": 0.5013834238052368,
+      "coordinates": {
+        "x1": 115,
+        "y1": 855,
+        "x2": 1019,
+        "y2": 935
+      },
+      "dimensions": {
+        "width": 904,
+        "height": 80
+      },
+      "area": 72320,
+      "aspect_ratio": 11.3,
+      "center": {
+        "x": 567,
+        "y": 895
+      },
+      "visual_features": {
+        "dominant_color": [
+          224.12600940265486,
+          224.19186946902656,
+          224.19600387168143
+        ],
+        "edge_density": 0.1263965707964602,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 11,
+      "type": "Title",
+      "confidence": 0.3228118121623993,
+      "coordinates": {
+        "x1": 134,
+        "y1": 1037,
+        "x2": 699,
+        "y2": 1065
+      },
+      "dimensions": {
+        "width": 565,
+        "height": 28
+      },
+      "area": 15820,
+      "aspect_ratio": 20.178571428571427,
+      "center": {
+        "x": 416,
+        "y": 1051
+      },
+      "visual_features": {
+        "dominant_color": [
+          210.9432364096081,
+          211.0132743362832,
+          211.05050568900126
+        ],
+        "edge_density": 0.18375474083438686,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Text",
+      "confidence": 0.6629105806350708,
+      "coordinates": {
+        "x1": 138,
+        "y1": 1038,
+        "x2": 688,
+        "y2": 1063
+      },
+      "dimensions": {
+        "width": 550,
+        "height": 25
+      },
+      "area": 13750,
+      "aspect_ratio": 22.0,
+      "center": {
+        "x": 413,
+        "y": 1050
+      },
+      "visual_features": {
+        "dominant_color": [
+          204.8114909090909,
+          204.88436363636364,
+          204.93207272727273
+        ],
+        "edge_density": 0.20698181818181818,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Text",
+      "confidence": 0.5480796694755554,
+      "coordinates": {
+        "x1": 146,
+        "y1": 1088,
+        "x2": 971,
+        "y2": 1114
+      },
+      "dimensions": {
+        "width": 825,
+        "height": 26
+      },
+      "area": 21450,
+      "aspect_ratio": 31.73076923076923,
+      "center": {
+        "x": 558,
+        "y": 1101
+      },
+      "visual_features": {
+        "dominant_color": [
+          205.87720279720278,
+          205.86363636363637,
+          205.91146853146853
+        ],
+        "edge_density": 0.2020979020979021,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Figure",
+      "confidence": 0.435401052236557,
+      "coordinates": {
+        "x1": 60,
+        "y1": 1160,
+        "x2": 1200,
+        "y2": 1610
+      },
+      "dimensions": {
+        "width": 1140,
+        "height": 450
+      },
+      "area": 513000,
+      "aspect_ratio": 2.533333333333333,
+      "center": {
+        "x": 630,
+        "y": 1385
+      },
+      "visual_features": {
+        "dominant_color": [
+          244.40258479532164,
+          244.45001364522417,
+          244.43679532163742
+        ],
+        "edge_density": 0.04126315789473684,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 3,
+      "type": "Title",
+      "confidence": 0.8727797269821167,
+      "coordinates": {
+        "x1": 109,
+        "y1": 1545,
+        "x2": 1058,
+        "y2": 1605
+      },
+      "dimensions": {
+        "width": 949,
+        "height": 60
+      },
+      "area": 56940,
+      "aspect_ratio": 15.816666666666666,
+      "center": {
+        "x": 583,
+        "y": 1575
+      },
+      "visual_features": {
+        "dominant_color": [
+          218.85398665261678,
+          218.96682472778363,
+          219.05670881629786
+        ],
+        "edge_density": 0.1458377239199157,
+        "content_type": "mixed"
+      }
+    }
+  ],
+  "tables": [
+    {
+      "table_id": 0,
+      "confidence": 0.9817898869514465,
+      "coordinates": {
+        "x1": 71,
+        "y1": 523,
+        "x2": 1204,
+        "y2": 1644
+      },
+      "dimensions": {
+        "width": 1133,
+        "height": 1121
+      },
+      "structure": {
+        "estimated_rows": 1563,
+        "estimated_cols": 1646,
+        "has_borders": true
+      },
+      "border_analysis": {
+        "has_outer_border": true,
+        "border_complexity": 740,
+        "estimated_thickness": "medium"
+      }
+    },
+    {
+      "table_id": 1,
+      "confidence": 0.8590573072433472,
+      "coordinates": {
+        "x1": 68,
+        "y1": 383,
+        "x2": 1203,
+        "y2": 503
+      },
+      "dimensions": {
+        "width": 1135,
+        "height": 120
+      },
+      "structure": {
+        "estimated_rows": 285,
+        "estimated_cols": 194,
+        "has_borders": true
+      },
+      "border_analysis": {
+        "has_outer_border": true,
+        "border_complexity": 228,
+        "estimated_thickness": "medium"
+      }
+    }
+  ],
+  "text_content": {
+    "block_0": {
+      "type": "Title",
+      "text": "Dept. of Computer Science and Engineering (41 @& ML)\n\nif\n& Computer Science and Engineering (Cyber Security)\n",
+      "coordinates": [
+        295.3858642578125,
+        51.35586166381836,
+        1217.44189453125,
+        125.85018157958984
+      ]
+    },
+    "block_2": {
+      "type": "Text",
+      "text": "Instructions to Candidates: Answer any two full questions.\n",
+      "coordinates": [
+        68.20018005371094,
+        586.8344116210938,
+        684.5645751953125,
+        611.3544921875
+      ]
+    },
+    "block_3": {
+      "type": "Title",
+      "text": "a | Explain the Softmax and ReLU activation functions with graph representations. |\nIllustrate the concept of dead neurons in a neural network. ]\n",
+      "coordinates": [
+        109.11993408203125,
+        1545.944580078125,
+        1058.0263671875,
+        1605.5467529296875
+      ]
+    },
+    "block_4": {
+      "type": "Title",
+      "text": "rogramme: B E \u2014 Computer Science and Engineering (AI&ML) &\nComputer Science and Engineering (Cyber Security)\nInternal Assessment \u2014 I\n",
+      "coordinates": [
+        138.9451904296875,
+        211.6984405517578,
+        1170.2298583984375,
+        333.5707092285156
+      ]
+    },
+    "block_5": {
+      "type": "Text",
+      "text": "Differentiate Biological Neuron and Artificial Neuron.\n",
+      "coordinates": [
+        138.17709350585938,
+        1038.6986083984375,
+        688.8777465820312,
+        1063.754150390625
+      ]
+    },
+    "block_6": {
+      "type": "Text",
+      "text": "Jerive the update rule for Gradient Descent used to minimize a given loss functio\n",
+      "coordinates": [
+        146.1243133544922,
+        1088.5006103515625,
+        971.4843139648438,
+        1114.6021728515625
+      ]
+    },
+    "block_7": {
+      "type": "Title",
+      "text": "Describe Categorical Cross Entropy (CCE) and Binary Cross-Entropy (BCE). For the\ngiven output of Softmax activation [0.7,0.1,0.2] and tragets [1,0,0], Calculate the CCE\nLoss.\n",
+      "coordinates": [
+        115.7967758178711,
+        855.58056640625,
+        1019.1614990234375,
+        935.1098022460938
+      ]
+    },
+    "block_11": {
+      "type": "Title",
+      "text": "Differentiate Biological Neuron and Artificial Neuron.\n",
+      "coordinates": [
+        134.340576171875,
+        1037.400634765625,
+        699.7383422851562,
+        1065.5633544921875
+      ]
+    },
+    "block_12": {
+      "type": "Title",
+      "text": "a) Discuss how the Perceptron functions as the basic structural element in building neural\nnetworks with a neat diagram.\n",
+      "coordinates": [
+        94.48531341552734,
+        774.5958251953125,
+        1040.7109375,
+        838.7747192382812
+      ]
+    },
+    "block_14": {
+      "type": "Text",
+      "text": "Internal Assessment \u2014 lL\n",
+      "coordinates": [
+        430.0032958984375,
+        306.7138366699219,
+        785.1403198242188,
+        334.3851013183594
+      ]
+    }
+  },
+  "structure_analysis": {
+    "header_detected": true,
+    "question_blocks": [
+      {
+        "block_id": "block_0",
+        "type": "Title",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_2",
+        "type": "Text",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_3",
+        "type": "Title",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_4",
+        "type": "Title",
+        "contains_questions": true
+      }
+    ],
+    "table_questions": [],
+    "footer_detected": false,
+    "total_questions": 0,
+    "layout_type": "mixed_content"
+  }
+}

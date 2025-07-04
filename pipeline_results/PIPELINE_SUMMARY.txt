@@ -1,0 +1,58 @@
+
+MASTER ANALYSIS PIPELINE SUMMARY
+==================================================
+
+Image: sample1.jpg
+Processing Time: 60.0 seconds
+Output Directory: pipeline_results
+
+SCRIPT RESULTS:
+==============================
+
+1. ADVANCED ANALYSIS:
+   Status: FAILED
+   Blocks: N/A
+   Tables: N/A
+
+2. STRATEGY COMPARISON:
+   Status: FAILED
+   Best Strategy: N/A
+   Best Count: N/A
+
+3. HYBRID SVG DETECTION:
+   Status: FAILED
+   Elements: N/A
+   SVG Groups: N/A
+
+4. TABLE PARSING:
+   Status: FAILED
+   Cells: N/A
+   Grid: N/AxN/A
+
+5. SVG CREATION:
+   Status: FAILED
+   Elements Processed: N/A
+
+6. VISUALIZATION ENHANCEMENT:
+   Status: FAILED
+   Visualizations: N/A
+   Individual Blocks: N/A
+
+OUTPUT DIRECTORIES:
+==============================
+advanced_analysis: pipeline_results\01_advanced_analysis (37 files)
+strategy_comparison: pipeline_results\02_strategy_comparison (6 files)
+hybrid_svg_detection: pipeline_results\03_hybrid_svg_detection (9 files)
+table_parsing: pipeline_results\04_table_parsing (9 files)
+svg_creation: pipeline_results\05_svg_creation (4 files)
+visualization_enhancement: pipeline_results\06_visualization_enhancement (7 files)
+
+QUICK ACCESS FILES:
+==============================
+Final SVG: pipeline_results\05_svg_creation\sample1_reconstructed.svg
+HTML Preview: pipeline_results\05_svg_creation\sample1_reconstructed_preview.html
+Analysis Dashboard: pipeline_results\06_visualization_enhancement\sample1_dashboard.png
+Table Analysis: pipeline_results\04_table_parsing\sample1_table_parsing_analysis.png
+
+ERRORS (if any):
+==============================

@@ -1,0 +1,404 @@
+{
+  "image_path": "temp_uploads\\sample6.jpg",
+  "image_shape": [
+    3508,
+    2481,
+    3
+  ],
+  "strategies": {
+    "general_low_threshold": {
+      "blocks": [
+        {
+          "id": 0,
+          "type": "Title",
+          "confidence": 0.8829346895217896,
+          "coordinates": {
+            "x1": 452,
+            "y1": 78,
+            "x2": 2268,
+            "y2": 210
+          },
+          "dimensions": {
+            "width": 1816,
+            "height": 131
+          },
+          "area": 238681
+        },
+        {
+          "id": 1,
+          "type": "Text",
+          "confidence": 0.8771603107452393,
+          "coordinates": {
+            "x1": 1073,
+            "y1": 351,
+            "x2": 1464,
+            "y2": 389
+          },
+          "dimensions": {
+            "width": 391,
+            "height": 37
+          },
+          "area": 14629
+        },
+        {
+          "id": 2,
+          "type": "Figure",
+          "confidence": 0.8555081486701965,
+          "coordinates": {
+            "x1": 207,
+            "y1": 221,
+            "x2": 2304,
+            "y2": 3165
+          },
+          "dimensions": {
+            "width": 2096,
+            "height": 2944
+          },
+          "area": 6172510
+        },
+        {
+          "id": 3,
+          "type": "Text",
+          "confidence": 0.8212417960166931,
+          "coordinates": {
+            "x1": 739,
+            "y1": 273,
+            "x2": 2230,
+            "y2": 322
+          },
+          "dimensions": {
+            "width": 1490,
+            "height": 48
+          },
+          "area": 72762
+        },
+        {
+          "id": 4,
+          "type": "Text",
+          "confidence": 0.7116113901138306,
+          "coordinates": {
+            "x1": 420,
+            "y1": 2972,
+            "x2": 1666,
+            "y2": 3055
+          },
+          "dimensions": {
+            "width": 1246,
+            "height": 82
+          },
+          "area": 103415
+        },
+        {
+          "id": 5,
+          "type": "Text",
+          "confidence": 0.5572040677070618,
+          "coordinates": {
+            "x1": 196,
+            "y1": 275,
+            "x2": 2242,
+            "y2": 342
+          },
+          "dimensions": {
+            "width": 2045,
+            "height": 66
+          },
+          "area": 135120
+        }
+      ],
+      "count": 6
+    },
+    "very_low_threshold": {
+      "blocks": [
+        {
+          "id": 0,
+          "type": "Title",
+          "confidence": 0.8829346895217896,
+          "coordinates": {
+            "x1": 452,
+            "y1": 78,
+            "x2": 2268,
+            "y2": 210
+          },
+          "dimensions": {
+            "width": 1816,
+            "height": 131
+          },
+          "area": 238681
+        },
+        {
+          "id": 1,
+          "type": "Text",
+          "confidence": 0.8771603107452393,
+          "coordinates": {
+            "x1": 1073,
+            "y1": 351,
+            "x2": 1464,
+            "y2": 389
+          },
+          "dimensions": {
+            "width": 391,
+            "height": 37
+          },
+          "area": 14629
+        },
+        {
+          "id": 2,
+          "type": "Figure",
+          "confidence": 0.8555081486701965,
+          "coordinates": {
+            "x1": 207,
+            "y1": 221,
+            "x2": 2304,
+            "y2": 3165
+          },
+          "dimensions": {
+            "width": 2096,
+            "height": 2944
+          },
+          "area": 6172510
+        },
+        {
+          "id": 3,
+          "type": "Text",
+          "confidence": 0.8212417960166931,
+          "coordinates": {
+            "x1": 739,
+            "y1": 273,
+            "x2": 2230,
+            "y2": 322
+          },
+          "dimensions": {
+            "width": 1490,
+            "height": 48
+          },
+          "area": 72762
+        },
+        {
+          "id": 4,
+          "type": "Text",
+          "confidence": 0.7116113901138306,
+          "coordinates": {
+            "x1": 420,
+            "y1": 2972,
+            "x2": 1666,
+            "y2": 3055
+          },
+          "dimensions": {
+            "width": 1246,
+            "height": 82
+          },
+          "area": 103415
+        },
+        {
+          "id": 5,
+          "type": "Text",
+          "confidence": 0.5572040677070618,
+          "coordinates": {
+            "x1": 196,
+            "y1": 275,
+            "x2": 2242,
+            "y2": 342
+          },
+          "dimensions": {
+            "width": 2045,
+            "height": 66
+          },
+          "area": 135120
+        }
+      ],
+      "count": 6
+    },
+    "table_specific": {
+      "blocks": [
+        {
+          "id": 0,
+          "type": "Table",
+          "confidence": 0.9952329993247986,
+          "coordinates": {
+            "x1": 254,
+            "y1": 933,
+            "x2": 2270,
+            "y2": 3054
+          },
+          "dimensions": {
+            "width": 2015,
+            "height": 2120
+          },
+          "area": 4274534
+        },
+        {
+          "id": 1,
+          "type": "Table",
+          "confidence": 0.9540059566497803,
+          "coordinates": {
+            "x1": 296,
+            "y1": 403,
+            "x2": 2231,
+            "y2": 598
+          },
+          "dimensions": {
+            "width": 1935,
+            "height": 194
+          },
+          "area": 376324
+        }
+      ],
+      "count": 2
+    },
+    "preprocessed": {
+      "blocks": [
+        {
+          "id": 0,
+          "type": "Title",
+          "confidence": 0.8813185095787048,
+          "coordinates": {
+            "x1": 159,
+            "y1": 77,
+            "x2": 2334,
+            "y2": 211
+          },
+          "dimensions": {
+            "width": 2174,
+            "height": 134
+          },
+          "area": 291883
+        },
+        {
+          "id": 1,
+          "type": "Text",
+          "confidence": 0.8406289219856262,
+          "coordinates": {
+            "x1": 178,
+            "y1": 270,
+            "x2": 2230,
+            "y2": 324
+          },
+          "dimensions": {
+            "width": 2051,
+            "height": 53
+          },
+          "area": 110162
+        },
+        {
+          "id": 2,
+          "type": "Text",
+          "confidence": 0.8400765657424927,
+          "coordinates": {
+            "x1": 1073,
+            "y1": 351,
+            "x2": 1469,
+            "y2": 389
+          },
+          "dimensions": {
+            "width": 396,
+            "height": 37
+          },
+          "area": 14969
+        },
+        {
+          "id": 3,
+          "type": "Figure",
+          "confidence": 0.8254634737968445,
+          "coordinates": {
+            "x1": 139,
+            "y1": 210,
+            "x2": 2338,
+            "y2": 3206
+          },
+          "dimensions": {
+            "width": 2199,
+            "height": 2995
+          },
+          "area": 6588209
+        },
+        {
+          "id": 4,
+          "type": "Text",
+          "confidence": 0.7841058969497681,
+          "coordinates": {
+            "x1": 427,
+            "y1": 2972,
+            "x2": 1660,
+            "y2": 3055
+          },
+          "dimensions": {
+            "width": 1233,
+            "height": 82
+          },
+          "area": 102335
+        },
+        {
+          "id": 5,
+          "type": "Text",
+          "confidence": 0.4096815288066864,
+          "coordinates": {
+            "x1": 171,
+            "y1": 280,
+            "x2": 2222,
+            "y2": 361
+          },
+          "dimensions": {
+            "width": 2050,
+            "height": 81
+          },
+          "area": 167485
+        },
+        {
+          "id": 6,
+          "type": "Text",
+          "confidence": 0.3877822458744049,
+          "coordinates": {
+            "x1": 1058,
+            "y1": 349,
+            "x2": 2156,
+            "y2": 390
+          },
+          "dimensions": {
+            "width": 1097,
+            "height": 41
+          },
+          "area": 45097
+        },
+        {
+          "id": 7,
+          "type": "Table",
+          "confidence": 0.37825754284858704,
+          "coordinates": {
+            "x1": 128,
+            "y1": 802,
+            "x2": 2398,
+            "y2": 3037
+          },
+          "dimensions": {
+            "width": 2270,
+            "height": 2235
+          },
+          "area": 5075607
+        }
+      ],
+      "count": 8
+    },
+    "manual_table": {
+      "blocks": [
+        {
+          "id": "manual_0",
+          "type": "Table",
+          "confidence": 0.8,
+          "coordinates": {
+            "x1": 0,
+            "y1": 0,
+            "x2": 2481,
+            "y2": 3508
+          },
+          "dimensions": {
+            "width": 2481,
+            "height": 3508
+          },
+          "area": 8703348,
+          "detection_method": "manual_grid"
+        }
+      ],
+      "count": 1
+    }
+  }
+}

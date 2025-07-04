@@ -1,0 +1,20 @@
+QUESTION PAPER ANALYSIS SUMMARY
+==================================================
+
+Image: sample6.jpg
+Dimensions: (3508, 2481, 3)
+
+LAYOUT ANALYSIS:
+Total blocks detected: 9
+  Title: 2
+  Figure: 1
+  Text: 5
+  Table: 1
+
+TABLE ANALYSIS:
+Tables detected: 2
+
+STRUCTURE ANALYSIS:
+Header detected: True
+Layout type: mixed_content
+Question blocks found: 5

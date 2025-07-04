@@ -1,0 +1,439 @@
+{
+  "image_info": {
+    "path": "temp_uploads\\sample6.jpg",
+    "dimensions": [
+      3508,
+      2481,
+      3
+    ],
+    "filename": "sample6.jpg"
+  },
+  "layout_blocks": [
+    {
+      "id": 0,
+      "type": "Title",
+      "confidence": 0.8829346895217896,
+      "coordinates": {
+        "x1": 452,
+        "y1": 78,
+        "x2": 2268,
+        "y2": 210
+      },
+      "dimensions": {
+        "width": 1816,
+        "height": 132
+      },
+      "area": 239712,
+      "aspect_ratio": 13.757575757575758,
+      "center": {
+        "x": 1360,
+        "y": 144
+      },
+      "visual_features": {
+        "dominant_color": [
+          198.4399779735683,
+          198.4399779735683,
+          198.4399779735683
+        ],
+        "edge_density": 0.07254538779869177,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 2,
+      "type": "Figure",
+      "confidence": 0.8555081486701965,
+      "coordinates": {
+        "x1": 207,
+        "y1": 221,
+        "x2": 2304,
+        "y2": 3165
+      },
+      "dimensions": {
+        "width": 2097,
+        "height": 2944
+      },
+      "area": 6173568,
+      "aspect_ratio": 0.712296195652174,
+      "center": {
+        "x": 1255,
+        "y": 1693
+      },
+      "visual_features": {
+        "dominant_color": [
+          234.23940758407457,
+          234.23940758407457,
+          234.23940758407457
+        ],
+        "edge_density": 0.0432558611162945,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Title",
+      "confidence": 0.2304491400718689,
+      "coordinates": {
+        "x1": 153,
+        "y1": 271,
+        "x2": 2251,
+        "y2": 329
+      },
+      "dimensions": {
+        "width": 2098,
+        "height": 58
+      },
+      "area": 121684,
+      "aspect_ratio": 36.172413793103445,
+      "center": {
+        "x": 1202,
+        "y": 300
+      },
+      "visual_features": {
+        "dominant_color": [
+          209.0432760264291,
+          209.0432760264291,
+          209.0432760264291
+        ],
+        "edge_density": 0.08239374116564216,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 3,
+      "type": "Text",
+      "confidence": 0.8212417960166931,
+      "coordinates": {
+        "x1": 739,
+        "y1": 273,
+        "x2": 2230,
+        "y2": 322
+      },
+      "dimensions": {
+        "width": 1491,
+        "height": 49
+      },
+      "area": 73059,
+      "aspect_ratio": 30.428571428571427,
+      "center": {
+        "x": 1484,
+        "y": 297
+      },
+      "visual_features": {
+        "dominant_color": [
+          199.27626986408245,
+          199.27626986408245,
+          199.27626986408245
+        ],
+        "edge_density": 0.10086368551444723,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Text",
+      "confidence": 0.5572040677070618,
+      "coordinates": {
+        "x1": 196,
+        "y1": 275,
+        "x2": 2242,
+        "y2": 342
+      },
+      "dimensions": {
+        "width": 2046,
+        "height": 67
+      },
+      "area": 137082,
+      "aspect_ratio": 30.53731343283582,
+      "center": {
+        "x": 1219,
+        "y": 308
+      },
+      "visual_features": {
+        "dominant_color": [
+          214.35010431712405,
+          214.35010431712405,
+          214.35010431712405
+        ],
+        "edge_density": 0.07295633270597161,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 1,
+      "type": "Text",
+      "confidence": 0.8771603107452393,
+      "coordinates": {
+        "x1": 1073,
+        "y1": 351,
+        "x2": 1464,
+        "y2": 389
+      },
+      "dimensions": {
+        "width": 391,
+        "height": 38
+      },
+      "area": 14858,
+      "aspect_ratio": 10.289473684210526,
+      "center": {
+        "x": 1268,
+        "y": 370
+      },
+      "visual_features": {
+        "dominant_color": [
+          189.06461165701978,
+          189.06461165701978,
+          189.06461165701978
+        ],
+        "edge_density": 0.12013729977116705,
+        "content_type": "mixed"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Table",
+      "confidence": 0.25260964035987854,
+      "coordinates": {
+        "x1": 198,
+        "y1": 833,
+        "x2": 2343,
+        "y2": 3033
+      },
+      "dimensions": {
+        "width": 2145,
+        "height": 2200
+      },
+      "area": 4719000,
+      "aspect_ratio": 0.975,
+      "center": {
+        "x": 1270,
+        "y": 1933
+      },
+      "visual_features": {
+        "dominant_color": [
+          234.4051432506887,
+          234.4051432506887,
+          234.4051432506887
+        ],
+        "edge_density": 0.043598008052553504,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Text",
+      "confidence": 0.205077663064003,
+      "coordinates": {
+        "x1": 459,
+        "y1": 1501,
+        "x2": 1423,
+        "y2": 1626
+      },
+      "dimensions": {
+        "width": 964,
+        "height": 125
+      },
+      "area": 120500,
+      "aspect_ratio": 7.712,
+      "center": {
+        "x": 941,
+        "y": 1563
+      },
+      "visual_features": {
+        "dominant_color": [
+          216.66933609958505,
+          216.66933609958505,
+          216.66933609958505
+        ],
+        "edge_density": 0.0854688796680498,
+        "content_type": "text"
+      }
+    },
+    {
+      "id": 4,
+      "type": "Text",
+      "confidence": 0.7116113901138306,
+      "coordinates": {
+        "x1": 420,
+        "y1": 2972,
+        "x2": 1666,
+        "y2": 3055
+      },
+      "dimensions": {
+        "width": 1246,
+        "height": 83
+      },
+      "area": 103418,
+      "aspect_ratio": 15.012048192771084,
+      "center": {
+        "x": 1043,
+        "y": 3013
+      },
+      "visual_features": {
+        "dominant_color": [
+          196.1766036860121,
+          196.1766036860121,
+          196.1766036860121
+        ],
+        "edge_density": 0.13328434121719623,
+        "content_type": "mixed"
+      }
+    }
+  ],
+  "tables": [
+    {
+      "table_id": 0,
+      "confidence": 0.9952329993247986,
+      "coordinates": {
+        "x1": 254,
+        "y1": 933,
+        "x2": 2270,
+        "y2": 3054
+      },
+      "dimensions": {
+        "width": 2016,
+        "height": 2121
+      },
+      "structure": {
+        "estimated_rows": 8766,
+        "estimated_cols": 7442,
+        "has_borders": true
+      },
+      "border_analysis": {
+        "has_outer_border": true,
+        "border_complexity": 308,
+        "estimated_thickness": "medium"
+      }
+    },
+    {
+      "table_id": 1,
+      "confidence": 0.9540059566497803,
+      "coordinates": {
+        "x1": 296,
+        "y1": 403,
+        "x2": 2231,
+        "y2": 598
+      },
+      "dimensions": {
+        "width": 1935,
+        "height": 195
+      },
+      "structure": {
+        "estimated_rows": 479,
+        "estimated_cols": 984,
+        "has_borders": true
+      },
+      "border_analysis": {
+        "has_outer_border": true,
+        "border_complexity": 236,
+        "estimated_thickness": "medium"
+      }
+    }
+  ],
+  "text_content": {
+    "block_0": {
+      "type": "Title",
+      "text": "AH Dept. of Computer Science and Engineering (Al & ML)\nTechnology | & Computer Science and Engineering (Cyber Security]\n",
+      "coordinates": [
+        452.0345153808594,
+        78.73544311523438,
+        2268.1982421875,
+        210.15634155273438
+      ]
+    },
+    "block_1": {
+      "type": "Text",
+      "text": "Internal Assessment \u2014 1\n",
+      "coordinates": [
+        1073.639404296875,
+        351.95416259765625,
+        1464.8621826171875,
+        389.3496398925781
+      ]
+    },
+    "block_3": {
+      "type": "Text",
+      "text": "cience and Engineering (AI&ML) & Computer Science and Engineering (Cyber Security\n",
+      "coordinates": [
+        739.7035522460938,
+        273.5634460449219,
+        2230.27734375,
+        322.3785400390625
+      ]
+    },
+    "block_4": {
+      "type": "Text",
+      "text": "Design a visualization of student performance using a dataset containing Usn,\nName, e level, test scores, attendance rate, and completion rate.\n\n",
+      "coordinates": [
+        420.0581359863281,
+        2972.659912109375,
+        1666.3275146484375,
+        3055.64013671875
+      ]
+    },
+    "block_5": {
+      "type": "Text",
+      "text": "Frogramme: BE \u2014 Computer Science and Engineering (AI&ML) & Computer Science and Engineering (Cyber Security)\n",
+      "coordinates": [
+        196.5399169921875,
+        275.9820251464844,
+        2242.2900390625,
+        342.0311584472656
+      ]
+    },
+    "block_7": {
+      "type": "Title",
+      "text": "Programme: B E \u2014 Computer Science and Engineering (AI&ML) & Computer Science and Engineering (Cyber Security)\n",
+      "coordinates": [
+        153.0973358154297,
+        271.5019836425781,
+        2251.83056640625,
+        329.0735168457031
+      ]
+    },
+    "block_8": {
+      "type": "Text",
+      "text": "Which of the following is a visualization option in Power BI?\na) Pivot table b) Histogram\nc) Bubble chart d) All of the above\n",
+      "coordinates": [
+        459.0924987792969,
+        1501.527587890625,
+        1423.77294921875,
+        1626.323974609375
+      ]
+    }
+  },
+  "structure_analysis": {
+    "header_detected": true,
+    "question_blocks": [
+      {
+        "block_id": "block_0",
+        "type": "Title",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_3",
+        "type": "Text",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_4",
+        "type": "Text",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_5",
+        "type": "Text",
+        "contains_questions": true
+      },
+      {
+        "block_id": "block_7",
+        "type": "Title",
+        "contains_questions": true
+      }
+    ],
+    "table_questions": [],
+    "footer_detected": false,
+    "total_questions": 0,
+    "layout_type": "mixed_content"
+  }
+}

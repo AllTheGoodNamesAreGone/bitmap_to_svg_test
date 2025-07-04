@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2481" height="3508" viewBox="0 0 2481 3508">
+  <style>
+        .header { font-family: Times, serif; font-size: 14px; font-weight: bold; fill: #000; }
+        .title { font-family: Times, serif; font-size: 16px; font-weight: bold; fill: #000; }
+        .course-info { font-family: Times, serif; font-size: 11px; fill: #000; }
+        .question-number { font-family: Times, serif; font-size: 12px; font-weight: bold; fill: #000; }
+        .question-text { font-family: Times, serif; font-size: 11px; fill: #000; }
+        .table-header { font-family: Times, serif; font-size: 10px; font-weight: bold; fill: #000; text-anchor: middle; }
+        .table-cell { font-family: Times, serif; font-size: 10px; fill: #000; text-anchor: middle; }
+        .instructions { font-family: Times, serif; font-size: 12px; font-style: italic; fill: #000; }
+        .classification { font-family: Times, serif; font-size: 9px; fill: #000; text-anchor: middle; }
+        .marks { font-family: Times, serif; font-size: 10px; font-weight: bold; fill: #000; text-anchor: middle; }
+        .text-block { font-family: Times, serif; font-size: 11px; fill: #000; }
+        .other-text { font-family: Times, serif; font-size: 10px; fill: #000; }
+        .border { fill: none; stroke: #000; stroke-width: 1; }
+        .line { fill: none; stroke: #000; stroke-width: 0.5; }
+        </style>
+  <g id="borders">
+    <rect x="701" y="479" width="51" height="1" class="line" id="border_0"/>
+    <rect x="869" y="486" width="117" height="2" class="border" id="border_1"/>
+    <rect x="633" y="488" width="56" height="2" class="line" id="border_2"/>
+    <rect x="877" y="488" width="111" height="2" class="border" id="border_3"/>
+    <rect x="875" y="490" width="114" height="2" class="border" id="border_4"/>
+    <rect x="632" y="491" width="70" height="1" class="line" id="border_5"/>
+    <rect x="631" y="492" width="70" height="1" class="line" id="border_6"/>
+    <rect x="1385" y="492" width="114" height="2" class="border" id="border_7"/>
+    <rect x="631" y="493" width="65" height="1" class="line" id="border_8"/>
+    <rect x="630" y="495" width="70" height="2" class="line" id="border_9"/>
+    <rect x="1394" y="495" width="123" height="2" class="border" id="border_10"/>
+    <rect x="630" y="497" width="70" height="1" class="line" id="border_11"/>
+    <rect x="874" y="497" width="63" height="1" class="line" id="border_12"/>
+    <rect x="1447" y="497" width="57" height="1" class="line" id="border_13"/>
+    <rect x="874" y="499" width="63" height="1" class="line" id="border_14"/>
+    <rect x="1447" y="499" width="70" height="2" class="line" id="border_15"/>
+    <rect x="646" y="503" width="51" height="1" class="line" id="border_16"/>
+    <rect x="647" y="504" width="50" height="1" class="line" id="border_17"/>
+    <rect x="843" y="505" width="94" height="1" class="line" id="border_18"/>
+    <rect x="1392" y="505" width="61" height="1" class="line" id="border_19"/>
+    <rect x="844" y="506" width="94" height="2" class="line" id="border_20"/>
+    <rect x="1385" y="508" width="68" height="2" class="line" id="border_21"/>
+    <rect x="1465" y="511" width="52" height="1" class="line" id="border_22"/>
+    <rect x="1364" y="512" width="89" height="1" class="line" id="border_23"/>
+    <rect x="1465" y="512" width="52" height="2" class="line" id="border_24"/>
+    <rect x="1447" y="514" width="70" height="1" class="line" id="border_25"/>
+    <rect x="225" y="1607" width="6" height="174" class="border" id="border_26"/>
+    <rect x="232" y="1704" width="1" height="69" class="line" id="border_27"/>
+    <rect x="218" y="1776" width="61" height="3" class="line" id="border_28"/>
+    <rect x="229" y="1793" width="1" height="63" class="line" id="border_29"/>
+    <rect x="234" y="1894" width="1" height="51" class="line" id="border_30"/>
+    <rect x="234" y="1999" width="1" height="79" class="line" id="border_31"/>
+  </g>
+  <g id="other_text_group">
+    <text x="938" y="259" class="other-text" id="other_text_0">Ramalah</text>
+    <text x="1148" y="260" class="other-text" id="other_text_1">[nstitute</text>
+    <text x="1395" y="264" class="other-text" id="other_text_2">Technology</text>
+    <text x="858" y="316" class="other-text" id="other_text_3">(Autonomous</text>
+    <text x="1151" y="316" class="other-text" id="other_text_4">Institute,</text>
+    <text x="1339" y="320" class="other-text" id="other_text_5">Affiliated</text>
+    <text x="1601" y="323" class="other-text" id="other_text_6">VTU)</text>
+    <text x="807" y="373" class="other-text" id="other_text_7">Programme:</text>
+    <text x="1428" y="380" class="other-text" id="other_text_8">branches</text>
+    <text x="317" y="485" class="other-text" id="other_text_9">03/03/2024</text>
+    <text x="1542" y="497" class="other-text" id="other_text_10">Management</text>
+    <text x="1928" y="505" class="other-text" id="other_text_11">i ntrepreneurship</text>
+    <text x="163" y="830" class="other-text" id="other_text_12">Portions</text>
+    <text x="304" y="2504" class="other-text" id="other_text_13">phones</text>
+    <text x="609" y="2505" class="other-text" id="other_text_14">permitted</text>
+  </g>
+  <g id="table_cell_group">
+    <text x="1340" y="265" class="table-cell" id="table_cell_0">ot</text>
+    <text x="1548" y="327" class="table-cell" id="table_cell_1">tO</text>
+    <text x="1359" y="379" class="table-cell" id="table_cell_2">all</text>
+    <text x="1308" y="382" class="table-cell" id="table_cell_3">tO</text>
+    <text x="1634" y="384" class="table-cell" id="table_cell_4">of</text>
+    <text x="1692" y="385" class="table-cell" id="table_cell_5">BK.</text>
+    <text x="169" y="486" class="table-cell" id="table_cell_6">Term:</text>
+    <text x="1150" y="490" class="table-cell" id="table_cell_7">AL6]1</text>
+    <text x="1835" y="504" class="table-cell" id="table_cell_8">and</text>
+    <text x="168" y="572" class="table-cell" id="table_cell_9">C (PR:</text>
+    <text x="166" y="657" class="table-cell" id="table_cell_10">Sem:</text>
+    <text x="149" y="2503" class="table-cell" id="table_cell_11">Mobile</text>
+    <text x="533" y="2510" class="table-cell" id="table_cell_12">not</text>
+    <text x="461" y="2515" class="table-cell" id="table_cell_13">are</text>
+  </g>
+  <g id="table_header_group">
+    <text x="1095" y="375" class="table-header" id="table_header_0">Common</text>
+    <text x="1010" y="489" class="table-header" id="table_header_1">(Code:</text>
+  </g>
+  <g id="instructions_group">
+    <text x="245" y="533" class="instructions" id="instructions_0">
+      <tspan x="245" dy="0">7 SEs anes ee een a Pest | Date:25/04/2025 Time: 3:00 — 4:00 P M : VI See: - Max</tspan>
+      <tspan x="245" dy="12">Marks: 30 ructions to Candidates: Answer any two full questions tions for test:</tspan>
+      <tspan x="245" dy="12">Unit I (Full), Unit I1(Full) Sl Question Marks | BL | CO No , 1 aj Analyze how</tspan>
+    </text>
+    <text x="166" y="744" class="instructions" id="instructions_1">Instructions</text>
+  </g>
+</svg>
